@@ -1,466 +1,360 @@
-=<!doctype html>
-<html lang="en" dir="ltr"><head><script>window["_codeletBootstrap_"]=JSON.parse('{"A":"A","B":"20260831-05-891237f","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/50d846425a1e5082.telemetry_sdk.js" integrity="sha512-Otbex+ztlVbcEGql0rXGd/3E3ee/hqAntg6DeuUEMG6pIPbXGOSvZbFZVzknAXi1tH/itQ+ijEhOTr2aWj6CXg=="></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamza's Kitchen</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&amp;family=Work+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <style>
-    :root { --green:#176b45; --deep:#0f5135; --orange:#f28c28; --cream:#fff8ee; --ink:#1d2b24; --sand:#f5ead9; --line:#eadbc6; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { width:100%; margin:0; font-family:"Work Sans",sans-serif; color:var(--ink); background:var(--cream); }
-    [dir="rtl"] body, [dir="rtl"] button, [dir="rtl"] input { font-family:"Noto Nastaliq Urdu","Work Sans",sans-serif; }
-    button, input { font:inherit; }
-    button { cursor:pointer; }
-    button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid var(--orange); outline-offset:3px; }
-    .site-shell { width:100%; overflow:hidden; }
-    .topbar { position:sticky; top:0; z-index:30; background:#fffdf9ee; backdrop-filter:blur(12px); border-bottom:1px solid #eadbc6; }
-    .nav-inner { max-width:1180px; margin:auto; min-height:72px; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
-    .brand { color:var(--green); white-space:nowrap; font-size:1.28rem; font-weight:800; letter-spacing:-.04em; }
-    .brand strong { color:var(--orange); }
-    .desktop-nav { display:flex; align-items:center; gap:4px; }
-    .desktop-nav a { color:#4b564f; text-decoration:none; padding:9px 11px; font-weight:700; font-size:.9rem; border-radius:999px; }
-    .desktop-nav a:hover { background:#eef5ef; color:var(--green); }
-    .controls { display:flex; align-items:center; gap:7px; }
-    .language { display:flex; gap:4px; padding:4px; background:#f3eadf; border-radius:999px; }
-    .lang-btn { border:0; padding:7px 11px; color:var(--ink); background:transparent; border-radius:999px; font-weight:700; font-size:.82rem; }
-    .lang-btn.active { color:#fff; background:var(--green); }
-    .menu-btn { display:none; border:1px solid var(--line); background:#fff; color:var(--green); border-radius:12px; width:42px; height:40px; align-items:center; justify-content:center; }
-    .mobile-nav { display:none; padding:0 20px 14px; border-top:1px solid var(--line); }
-    .mobile-nav.open { display:grid; }
-    .mobile-nav a { padding:12px 6px; color:var(--ink); border-bottom:1px solid #f0e7db; text-decoration:none; font-weight:700; }
-    .hero { position:relative; isolation:isolate; overflow:hidden; background:linear-gradient(120deg,var(--deep),var(--green)); color:#fff; }
-    .hero:after { content:""; position:absolute; z-index:-1; width:420px; height:420px; border-radius:50%; background:#f28c2828; right:-130px; top:-220px; }
-    .hero-inner { max-width:1180px; margin:auto; padding:62px 20px; display:grid; grid-template-columns:1.1fr .9fr; gap:42px; align-items:center; }
-    .eyebrow { display:inline-flex; align-items:center; gap:8px; color:#fff1d5; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; font-weight:800; }
-    .hero h1 { max-width:650px; margin:13px 0; font-size:clamp(2.5rem,5vw,4.5rem); line-height:1.02; letter-spacing:-.06em; }
-    .hero-copy { max-width:620px; color:#ecf4ee; line-height:1.7; font-size:1.08rem; }
-    .search-box { max-width:610px; display:flex; margin-top:25px; padding:6px; border-radius:18px; background:#fff; box-shadow:0 16px 28px #06281755; }
-    .search-box input { flex:1; min-width:0; border:0; padding:12px 14px; outline:none; color:var(--ink); background:transparent; }
-    .search-box button { border:0; padding:11px 18px; color:#fff; background:var(--orange); border-radius:13px; font-weight:800; }
-    .search-status { min-height:25px; margin:10px 4px 0; color:#ffe4bb; font-size:.9rem; }
-    .hero-visual { position:relative; min-height:300px; }
-    .hero-photo { position:absolute; inset:0 28px 0 0; width:calc(100% - 28px); height:100%; border-radius:30px; object-fit:cover; box-shadow:20px 20px 0 #f28c28; }
-    [dir="rtl"] .hero-photo { inset:0 0 0 28px; box-shadow:-20px 20px 0 #f28c28; }
-    .hero-badge { position:absolute; bottom:20px; left:-8px; padding:13px 16px; background:#fffdf9; color:var(--green); border-radius:15px; box-shadow:0 10px 25px #06281740; font-weight:800; }
-    [dir="rtl"] .hero-badge { left:auto; right:-8px; }
-    .section { max-width:1180px; margin:auto; padding:68px 20px; scroll-margin-top:82px; }
-    .section-top { display:flex; justify-content:space-between; align-items:end; gap:18px; margin-bottom:24px; }
-    .section-kicker { margin:0 0 6px; color:var(--orange); text-transform:uppercase; letter-spacing:.13em; font-size:.76rem; font-weight:800; }
-    .section h2 { margin:0; color:var(--green); font-size:clamp(1.8rem,3vw,2.5rem); letter-spacing:-.05em; }
-    .subcopy { max-width:510px; margin:0; color:#647068; line-height:1.6; }
-    .category-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-    .category { border:1px solid var(--line); padding:20px 15px; text-align:left; background:#fffdf9; color:var(--ink); border-radius:18px; transition:.2s ease; }
-    .category:hover, .category.active { border-color:var(--green); color:#fff; background:var(--green); transform:translateY(-3px); box-shadow:0 12px 24px #176b4520; }
-    .category .emoji { display:block; margin-bottom:8px; font-size:1.55rem; }
-    .category span { font-weight:800; }
-    .recipe-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-    .recipe-card { overflow:hidden; display:flex; flex-direction:column; background:#fffdf9; border:1px solid var(--line); border-radius:22px; box-shadow:0 8px 18px #4b342408; transition:transform .2s ease, box-shadow .2s ease; }
-    .recipe-card:hover { transform:translateY(-5px); box-shadow:0 18px 34px #4b342415; }
-    .recipe-card.hidden-card { display:none; }
-    .food-image-wrap { position:relative; height:185px; overflow:hidden; background:linear-gradient(135deg,#edb46b,#b7582a); }
-    .food-image { width:100%; height:100%; display:block; object-fit:cover; transition:transform .3s ease; }
-    .recipe-card:hover .food-image { transform:scale(1.05); }
-    .fav-btn { position:absolute; top:12px; right:12px; display:grid; place-items:center; width:38px; height:38px; border:0; border-radius:50%; background:#fffdf9e8; color:var(--green); }
-    [dir="rtl"] .fav-btn { right:auto; left:12px; }
-    .fav-btn.is-favourite { background:var(--orange); color:#fff; }
-    .recipe-content { display:flex; flex:1; flex-direction:column; padding:19px; }
-    .tag { align-self:flex-start; padding:5px 9px; color:var(--green); background:#e8f2e9; border-radius:999px; font-weight:800; font-size:.72rem; }
-    .recipe-content h3 { margin:12px 0 7px; color:var(--green); font-size:1.3rem; }
-    .recipe-content p { margin:0; color:#5e695f; line-height:1.55; font-size:.92rem; }
-    .meta { display:flex; flex-wrap:wrap; gap:12px; margin:17px 0; color:#6d6254; font-size:.8rem; font-weight:700; }
-    .meta span { display:inline-flex; gap:5px; align-items:center; }
-    .view-btn { width:100%; margin-top:auto; border:0; padding:11px 14px; border-radius:12px; background:var(--green); color:#fff; font-weight:800; transition:filter .2s; }
-    .view-btn:hover { filter:brightness(.9); }
-    .no-results { display:none; padding:38px 20px; text-align:center; color:#6b6258; border:1px dashed #cfbfa8; border-radius:18px; background:#fffdf9; }
-    .favourites-panel { display:grid; grid-template-columns:260px 1fr; gap:22px; padding:26px; border-radius:24px; background:linear-gradient(135deg,#fffdf9,#f7ead8); border:1px solid var(--line); }
-    .fav-stat { padding:25px; color:#fff; background:var(--green); border-radius:18px; }
-    .fav-stat strong { display:block; margin:6px 0; font-size:3rem; line-height:1; }
-    .fav-list { display:flex; flex-wrap:wrap; gap:10px; align-content:center; }
-    .fav-chip { display:inline-flex; align-items:center; gap:8px; padding:10px 13px; border:1px solid #e3cda8; background:#fff; color:var(--green); border-radius:999px; font-weight:800; }
-    .fav-empty { color:#756c61; line-height:1.55; }
-    footer { padding:35px 20px; text-align:center; color:#e9f0e9; background:var(--ink); }
-    footer p { margin:0; }
-    .modal { position:fixed; z-index:60; inset:0; display:none; align-items:center; justify-content:center; padding:18px; background:#10251db5; }
-    .modal.open { display:flex; }
-    .modal-card { position:relative; width:min(810px,100%); max-height:calc(90 * min(var(--vh, 1vh), 1vh)); overflow:auto; border-radius:24px; background:#fffdf9; box-shadow:0 25px 70px #0008; }
-    .modal-close { position:absolute; z-index:2; top:13px; right:13px; display:grid; place-items:center; width:42px; height:42px; border:0; border-radius:50%; color:var(--green); background:#fffdf9; box-shadow:0 4px 14px #0003; }
-    [dir="rtl"] .modal-close { right:auto; left:13px; }
-    .modal-image { width:100%; height:220px; object-fit:cover; }
-    .modal-body { padding:26px; }
-    .modal-body h2 { margin:0 0 8px; color:var(--green); font-size:2rem; }
-    .modal-meta { margin:0 0 20px; color:#756c61; font-weight:700; }
-    .detail-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:28px; }
-    .detail-grid h3 { color:var(--green); font-size:1.05rem; }
-    .detail-grid ul, .detail-grid ol { padding-inline-start:22px; color:#536057; line-height:1.8; }
-    @media (max-width:820px) {
-      .desktop-nav { display:none; } .menu-btn { display:flex; } .hero-inner { grid-template-columns:1fr; padding:48px 20px; } .hero-visual { min-height:250px; max-width:540px; width:calc(100% - 25px); } .category-grid { grid-template-columns:repeat(2,1fr); } .recipe-grid { grid-template-columns:repeat(2,1fr); } .favourites-panel { grid-template-columns:1fr; } .section-top { align-items:start; flex-direction:column; }
-    }
-    @media (max-width:520px) {
-      .nav-inner { min-height:64px; padding:9px 15px; } .brand { font-size:1.05rem; } .lang-btn { padding:6px 8px; font-size:.72rem; } .hero h1 { font-size:2.6rem; } .section { padding:48px 16px; } .recipe-grid { grid-template-columns:1fr; } .detail-grid { grid-template-columns:1fr; } .modal-body { padding:20px; }
-    }
-  </style>
-  <script src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js" type="text/javascript" integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q=="></script>
-  <script src="/_sdk/2cfae6c35b9820dc.resizing_sdk.js" type="text/javascript" integrity="sha512-Oy+wKa9tloayelgS18tBfR707QfWMdeA8unVpm1M0/W/edVyjcRCNO6/jCvDwt/HpUta1v7sfMHiF1mAVr5RIA=="></script>
- </head>
- <body data-template-id="__page-root" style="background: rgb(255, 248, 238);">
-  <div class="site-shell">
-   <header data-template-id="site-header" class="canva-header topbar" style="background: rgb(255, 253, 249);">
-    <div class="nav-inner">
-     <div data-template-id="brand" class="canva-text brand" style="color: rgb(23, 107, 69); font-weight: 800;">
-      Hamza's <strong>Kitchen</strong> 🍲
-     </div>
-     <nav class="desktop-nav" aria-label="Main navigation"><a data-template-id="nav-home" class="canva-link" href="#home" data-i18n="navHome" style="color: rgb(75, 86, 79); font-weight: 700;">Home</a> <a data-template-id="nav-recipes" class="canva-link" href="#recipes" data-i18n="navRecipes" style="color: rgb(75, 86, 79); font-weight: 700;">Recipes</a> <a data-template-id="nav-categories" class="canva-link" href="#categories" data-i18n="navCategories" style="color: rgb(75, 86, 79); font-weight: 700;">Categories</a> <a data-template-id="nav-favourites" class="canva-link" href="#favourites" data-i18n="navFavourites" style="color: rgb(75, 86, 79); font-weight: 700;">Favourites</a>
-     </nav>
-     <div class="controls">
-      <div class="language" aria-label="Language selector"><button data-template-id="english-button" class="canva-button lang-btn active" id="en" type="button" aria-pressed="true" style="background: rgb(23, 107, 69); color: rgb(255, 255, 255); font-weight: 700;">English</button> <button data-template-id="urdu-button" class="canva-button lang-btn" id="ur" type="button" aria-pressed="false" style="background: rgb(243, 234, 223); color: rgb(29, 43, 36); font-weight: 700;">اردو</button>
-      </div><button data-template-id="menu-button" class="canva-button menu-btn" id="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" style="background: rgb(255, 255, 255); color: rgb(23, 107, 69);"><i data-lucide="menu"></i></button>
-     </div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza's Kitchen - Recipes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green: #2B5738;
+            --dark-green: #1C3B24;
+            --orange: #E88325;
+            --light-cream: #F8F7F0;
+            --card-bg: #FFFFFF;
+            --text-main: #1C241E;
+            --text-muted: #667068;
+            --border: #E5E8E2;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--light-cream); color: var(--text-main); }
+        a { text-decoration: none; color: inherit; }
+
+        /* Navigation Header */
+        .topbar { position: sticky; top: 0; z-index: 100; background: #ffffffdd; backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+        .nav { max-width: 1280px; margin: auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .logo-group { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 44px; height: 44px; background: var(--green); border-radius: 12px; display: grid; place-items: center; font-size: 22px; color: #fff; }
+        .brand { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--green); line-height: 1.1; }
+        .brand span { color: var(--orange); }
+        .brand sub { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.65rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.5px; }
+
+        .navlinks { display: flex; gap: 6px; }
+        .navlinks a { padding: 8px 16px; border-radius: 99px; font-weight: 600; font-size: 0.9rem; color: var(--text-main); transition: all 0.2s; }
+        .navlinks a.active, .navlinks a:hover { background: var(--green); color: #fff; }
+
+        .search-box { position: relative; width: 260px; }
+        .search-box input { width: 100%; padding: 10px 16px 10px 40px; border-radius: 99px; border: 1px solid var(--border); outline: none; font-size: 0.88rem; background: #F3F5F1; }
+        .search-box span { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); opacity: 0.5; }
+
+        /* Container Layout */
+        .container { max-width: 1280px; margin: auto; padding: 24px; }
+        .main-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; }
+
+        /* Hero Banner */
+        .hero { background: linear-gradient(135deg, var(--dark-green), var(--green)); border-radius: 28px; color: #fff; padding: 48px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; position: relative; overflow: hidden; margin-bottom: 40px; }
+        .hero-tag { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.6rem; color: var(--orange); margin-bottom: 4px; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; line-height: 1.15; margin-bottom: 16px; }
+        .hero p { opacity: 0.85; line-height: 1.6; margin-bottom: 28px; font-size: 0.95rem; }
+        
+        .hero-features { display: flex; gap: 20px; }
+        .feature-item { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; font-weight: 600; }
+        .feature-icon { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; display: grid; place-items: center; font-size: 14px; color: var(--orange); }
+
+        .hero-img-wrap { position: relative; display: flex; justify-content: center; }
+        .hero-img-wrap img { width: 100%; max-width: 420px; height: 340px; object-fit: cover; border-radius: 50%; border: 8px solid rgba(255,255,255,0.15); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+
+        /* Category Section */
+        .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .section-header h2 { font-size: 1.35rem; font-weight: 700; color: var(--text-main); }
+        .view-all { color: var(--green); font-weight: 700; font-size: 0.88rem; }
+
+        .cats-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-bottom: 40px; }
+        .cat-item { background: var(--card-bg); border-radius: 20px; padding: 16px 12px; text-align: center; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+        .cat-item:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .cat-img { width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 12px; object-fit: cover; }
+        .cat-item h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+        .cat-item span { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
+
+        /* Recipe Grid */
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .card { background: var(--card-bg); border-radius: 20px; border: 1px solid var(--border); overflow: hidden; position: relative; display: flex; flex-direction: column; }
+        .card-img-wrap { height: 200px; position: relative; }
+        .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .badge { position: absolute; top: 14px; left: 14px; background: var(--orange); color: #fff; padding: 4px 12px; border-radius: 99px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; }
+        .fav-btn { position: absolute; bottom: -18px; right: 18px; width: 38px; height: 38px; background: #fff; border-radius: 50%; border: 1px solid var(--border); display: grid; place-items: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-size: 18px; color: #ccc; }
+        .fav-btn.active { color: #e74c3c; }
+
+        .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+        .card-body h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .rating { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px; }
+        .stars { color: #FFC107; }
+        .card-body p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px; flex: 1; }
+        
+        /* Sidebar Widgets */
+        .sidebar-widget { background: var(--card-bg); border-radius: 20px; border: 1px solid var(--border); padding: 20px; margin-bottom: 24px; }
+        .widget-title { font-size: 1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        
+        .special-card img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; margin-bottom: 12px; }
+        .special-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+        .btn-view { display: block; width: 100%; text-align: center; background: var(--green); color: #fff; padding: 10px; border-radius: 10px; font-weight: 700; font-size: 0.85rem; margin-top: 12px; }
+
+        .banner-widget { background: linear-gradient(135deg, var(--dark-green), var(--green)); color: #fff; border-radius: 20px; padding: 24px; text-align: center; }
+        .banner-widget h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 10px; }
+        .banner-widget p { font-size: 0.8rem; opacity: 0.8; margin-bottom: 16px; }
+        .banner-btn { background: var(--orange); color: #fff; padding: 10px 20px; border-radius: 10px; font-weight: 700; font-size: 0.85rem; border: 0; cursor: pointer; }
+
+        .newsletter-widget input { width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 10px; font-size: 0.85rem; outline: none; }
+        .newsletter-widget button { width: 100%; padding: 12px; background: var(--green); color: #fff; border: 0; border-radius: 10px; font-weight: 700; cursor: pointer; }
+
+        /* Footer Features Bar */
+        .bottom-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; background: var(--dark-green); color: #fff; padding: 20px; border-radius: 16px; margin-top: 40px; }
+        .b-feat { display: flex; align-items: center; gap: 12px; }
+        .b-feat span { font-size: 20px; color: var(--orange); }
+        .b-feat div h5 { font-size: 0.85rem; font-weight: 700; }
+        .b-feat div p { font-size: 0.72rem; opacity: 0.7; }
+
+        @media(max-width: 1024px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero-features { justify-content: center; }
+            .cats-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media(max-width: 640px) {
+            .grid { grid-template-columns: 1fr; }
+            .cats-grid { grid-template-columns: repeat(2, 1fr); }
+            .bottom-features { grid-template-columns: repeat(2, 1fr); }
+            .navlinks { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="topbar">
+        <div class="nav">
+            <div class="logo-group">
+                <div class="logo-icon">🍳</div>
+                <div class="brand">
+                    Hamza's <span>Kitchen</span>
+                    <sub>Delicious Recipes, Made Easy</sub>
+                </div>
+            </div>
+            <nav class="navlinks">
+                <a href="#" class="active">Home</a>
+                <a href="#recipes">Recipes</a>
+                <a href="#categories">Categories</a>
+                <a href="#favourites">Favourites</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" placeholder="Search recipes...">
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div>
+                <div class="hero-tag">Welcome to</div>
+                <h1>Hamza's Kitchen</h1>
+                <p>A place for food lovers! Find amazing Pakistani recipes with easy step-by-step instructions.</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">📖</div>
+                        <span>Easy Recipes<br><small style="font-weight:400;opacity:0.8;">Step-by-step</small></span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⏱</div>
+                        <span>Save Time<br><small style="font-weight:400;opacity:0.8;">Quick & Simple</small></span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">♥</div>
+                        <span>Made with Love<br><small style="font-weight:400;opacity:0.8;">For You</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-img-wrap">
+                <img src="https://images.pexels.com/photos/16274427/pexels-photo-16274427/free-photo-of-delicious-chicken-biryani.jpeg" alt="Chicken Biryani">
+            </div>
+        </section>
+
+        <!-- Main Body Layout -->
+        <div class="main-layout">
+            <!-- Left Main Column -->
+            <main>
+                <!-- Categories -->
+                <section id="categories" style="margin-bottom: 32px;">
+                    <div class="section-header">
+                        <h2>Browse Recipes by Category</h2>
+                        <a href="#" class="view-all">View All ›</a>
+                    </div>
+                    <div class="cats-grid">
+                        <div class="cat-item">
+                            <img src="https://images.pexels.com/photos/12737800/pexels-photo-12737800.jpeg" class="cat-img" alt="Main Course">
+                            <h4>Main Course</h4>
+                            <span>120+ Recipes</span>
+                        </div>
+                        <div class="cat-item">
+                            <img src="https://images.pexels.com/photos/16274427/pexels-photo-16274427/free-photo-of-delicious-chicken-biryani.jpeg" class="cat-img" alt="Biryani">
+                            <h4>Biryani</h4>
+                            <span>45+ Recipes</span>
+                        </div>
+                        <div class="cat-item">
+                            <img src="https://images.pexels.com/photos/9603932/pexels-photo-9603932.jpeg" class="cat-img" alt="Chicken">
+                            <h4>Chicken Recipes</h4>
+                            <span>80+ Recipes</span>
+                        </div>
+                        <div class="cat-item">
+                            <img src="https://images.pexels.com/photos/14883758/pexels-photo-14883758.jpeg" class="cat-img" alt="Desserts">
+                            <h4>Desserts</h4>
+                            <span>60+ Recipes</span>
+                        </div>
+                        <div class="cat-item">
+                            <img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg" class="cat-img" alt="Healthy">
+                            <h4>Healthy Recipes</h4>
+                            <span>40+ Recipes</span>
+                        </div>
+                        <div class="cat-item">
+                            <img src="https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg" class="cat-img" alt="Quick">
+                            <h4>Quick Recipes</h4>
+                            <span>30+ Recipes</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Recipes Grid -->
+                <section id="recipes">
+                    <div class="section-header">
+                        <h2>Featured Recipes</h2>
+                        <a href="#" class="view-all">View All ›</a>
+                    </div>
+                    <div class="grid">
+                        <!-- Recipe Card 1 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Popular</span>
+                                <img src="https://images.pexels.com/photos/12737800/pexels-photo-12737800.jpeg" alt="Chicken Karahi">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>Chicken Karahi</h3>
+                                <div class="rating">
+                                    <span class="stars">★★★★★</span> (4.7) &nbsp;•&nbsp; ⏱ 30 min
+                                </div>
+                                <p>Delicious and spicy chicken karahi recipe cooked with fresh tomatoes and green chillies.</p>
+                            </div>
+                        </article>
+
+                        <!-- Recipe Card 2 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Popular</span>
+                                <img src="https://images.pexels.com/photos/16274427/pexels-photo-16274427/free-photo-of-delicious-chicken-biryani.jpeg" alt="Chicken Biryani">
+                                <button class="fav-btn active">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>Chicken Biryani</h3>
+                                <div class="rating">
+                                    <span class="stars">★★★★★</span> (4.8) &nbsp;•&nbsp; ⏱ 45 min
+                                </div>
+                                <p>Aromatic and flavorful chicken biryani made with premium basmati rice and rich spices.</p>
+                            </div>
+                        </article>
+
+                        <!-- Recipe Card 3 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge" style="background:#4A90E2;">New</span>
+                                <img src="https://images.pexels.com/photos/14883758/pexels-photo-14883758.jpeg" alt="Shahi Kheer">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>Shahi Kheer</h3>
+                                <div class="rating">
+                                    <span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 25 min
+                                </div>
+                                <p>Rich and creamy rice kheer garnished with nuts, perfect for festive desserts.</p>
+                            </div>
+                        </article>
+
+                        <!-- Recipe Card 4 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Popular</span>
+                                <img src="https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg" alt="Gol Gappay">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>Gol Gappay</h3>
+                                <div class="rating">
+                                    <span class="stars">★★★★★</span> (4.6) &nbsp;•&nbsp; ⏱ 20 min
+                                </div>
+                                <p>Crispy gol gappay served with authentic spicy mint water and tangy tamarind chutney.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Right Sidebar -->
+            <aside>
+                <!-- Today's Special -->
+                <div class="sidebar-widget">
+                    <div class="widget-title">🔥 Today's Special</div>
+                    <div class="special-card">
+                        <img src="https://images.pexels.com/photos/9603932/pexels-photo-9603932.jpeg" alt="Beef Nihari">
+                        <h4>Beef Nihari</h4>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> (4.8)
+                        </div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:4px;">Traditional beef nihari slow cooked to perfection with aromatic spices.</p>
+                        <a href="#" class="btn-view">View Recipe</a>
+                    </div>
+                </div>
+
+                <!-- Callout Banner -->
+                <div class="banner-widget">
+                    <h3>Cook Delicious<br>Eat Healthy<br>Be Happy</h3>
+                    <p>Discover easy healthy lifestyle options.</p>
+                    <button class="banner-btn">Eat Healthy, Live Healthy</button>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="sidebar-widget newsletter-widget" style="margin-top: 24px;">
+                    <div class="widget-title">📩 Get New Recipes!</div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Subscribe to get tasty recipes and cooking tips directly in your inbox.</p>
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Bottom Features Bar -->
+        <div class="bottom-features">
+            <div class="b-feat">
+                <span>🍳</span>
+                <div>
+                    <h5>Easy to Cook</h5>
+                    <p>Simple ingredients & easy steps</p>
+                </div>
+            </div>
+            <div class="b-feat">
+                <span>🍃</span>
+                <div>
+                    <h5>Healthy & Tasty</h5>
+                    <p>Healthy recipes for a better life</p>
+                </div>
+            </div>
+            <div class="b-feat">
+                <span>⏱</span>
+                <div>
+                    <h5>Save Your Time</h5>
+                    <p>Quick recipes for busy days</p>
+                </div>
+            </div>
+            <div class="b-feat">
+                <span>♥</span>
+                <div>
+                    <h5>Made with Love</h5>
+                    <p>Cook with love for your family</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation"><a data-template-id="mobile-nav-home" class="canva-link" href="#home" data-i18n="navHome" style="color: rgb(29, 43, 36); font-weight: 700;">Home</a> <a data-template-id="mobile-nav-recipes" class="canva-link" href="#recipes" data-i18n="navRecipes" style="color: rgb(29, 43, 36); font-weight: 700;">Recipes</a> <a data-template-id="mobile-nav-categories" class="canva-link" href="#categories" data-i18n="navCategories" style="color: rgb(29, 43, 36); font-weight: 700;">Categories</a> <a data-template-id="mobile-nav-favourites" class="canva-link" href="#favourites" data-i18n="navFavourites" style="color: rgb(29, 43, 36); font-weight: 700;">Favourites</a>
-    </nav>
-   </header>
-   <main>
-    <section id="home" data-template-id="hero-section" class="canva-banner hero" style="background: linear-gradient(120deg, rgb(15, 81, 53), rgb(23, 107, 69));">
-     <div class="hero-inner">
-      <div>
-       <p data-template-id="hero-eyebrow" class="canva-text eyebrow" data-i18n="heroEyebrow" style="color: rgb(255, 241, 213); font-weight: 800;">PAKISTANI FLAVOURS, MADE SIMPLE</p>
-       <h1 data-template-id="hero-title" class="canva-text" data-i18n="heroTitle" style="color: rgb(255, 255, 255); font-weight: 800;">Cook. Taste. Enjoy.</h1>
-       <p data-template-id="hero-description" class="canva-text hero-copy" data-i18n="heroDescription" style="color: rgb(236, 244, 238); line-height: 1.7;">Discover beloved Pakistani recipes, explained step by step for every home kitchen.</p>
-       <form id="recipe-search-form" class="search-box" role="search"><label class="sr-only" for="search-input">Search recipes</label> <input data-template-id="search-input" class="canva-input" id="search-input" type="search" autocomplete="off" style="color: rgb(29, 43, 36);"> <button data-template-id="search-button" class="canva-button" type="submit" data-i18n="searchButton" style="background: rgb(242, 140, 40); color: rgb(255, 255, 255); font-weight: 800;">Search</button>
-       </form>
-       <p id="search-status" class="search-status" aria-live="polite"></p>
-      </div>
-      <div class="hero-visual"><img data-template-id="hero-image" class="canva-image hero-photo" loading="lazy" src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Delicious chicken biryani served with onion rings, lime, and yogurt dip">
-       <div data-template-id="hero-badge" class="canva-tag hero-badge" data-i18n="heroBadge" style="background: rgb(255, 253, 249); color: rgb(23, 107, 69); font-weight: 800;">
-        6 kitchen-tested favourites
-       </div>
-      </div>
-     </div>
-    </section>
-    <section id="categories" class="section">
-     <div class="section-top">
-      <div>
-       <p data-template-id="categories-kicker" class="canva-text section-kicker" data-i18n="categoriesKicker" style="color: rgb(242, 140, 40); font-weight: 800;">FIND YOUR CRAVING</p>
-       <h2 data-template-id="categories-title" class="canva-text" data-i18n="categoriesTitle" style="color: rgb(23, 107, 69); font-weight: 800;">Explore Categories</h2>
-      </div>
-      <p data-template-id="categories-copy" class="canva-text subcopy" data-i18n="categoriesCopy" style="color: rgb(100, 112, 104);">Choose a category to bring the best dishes to your table.</p>
-     </div>
-     <div class="category-grid"><button data-template-id="category-all" class="canva-card category active" type="button" data-category="all" style="background: rgb(23, 107, 69); color: rgb(255, 255, 255);"><span class="emoji">✨</span><span data-i18n="categoryAll">All Recipes</span></button> <button data-template-id="category-main" class="canva-card category" type="button" data-category="main" style="background: rgb(255, 253, 249); color: rgb(29, 43, 36);"><span class="emoji">🍛</span><span data-i18n="categoryMain">Main Dishes</span></button> <button data-template-id="category-slow" class="canva-card category" type="button" data-category="slow" style="background: rgb(255, 253, 249); color: rgb(29, 43, 36);"><span class="emoji">🍲</span><span data-i18n="categorySlow">Slow Cooked</span></button> <button data-template-id="category-bbq" class="canva-card category" type="button" data-category="bbq" style="background: rgb(255, 253, 249); color: rgb(29, 43, 36);"><span class="emoji">🔥</span><span data-i18n="categoryBbq">BBQ &amp; Grill</span></button> <button data-template-id="category-dessert" class="canva-card category" type="button" data-category="dessert" style="background: rgb(255, 253, 249); color: rgb(29, 43, 36);"><span class="emoji">🍮</span><span data-i18n="categoryDessert">Desserts</span></button>
-     </div>
-    </section>
-    <section id="recipes" class="section">
-     <div class="section-top">
-      <div>
-       <p data-template-id="recipes-kicker" class="canva-text section-kicker" data-i18n="recipesKicker" style="color: rgb(242, 140, 40); font-weight: 800;">THE RECIPE BOOK</p>
-       <h2 data-template-id="recipes-title" class="canva-text" data-i18n="recipesTitle" style="color: rgb(23, 107, 69); font-weight: 800;">Made for your table</h2>
-      </div>
-      <p data-template-id="recipes-copy" class="canva-text subcopy" data-i18n="recipesCopy" style="color: rgb(100, 112, 104);">Six comforting classics, from fragrant rice to syrup-soaked sweets.</p>
-     </div>
-     <div id="recipe-grid" class="recipe-grid">
-      <article data-template-id="recipe-biryani-card" class="canva-card recipe-card" data-recipe="biryani" data-category="main" style="background: rgb(255, 253, 249);">
-       <div class="food-image-wrap">
-        <img data-template-id="recipe-biryani-image" class="canva-image food-image" loading="lazy" src="https://images.pexels.com/photos/9609860/pexels-photo-9609860.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Delicious Indian chicken biryani served with accompanying curry and yogurt raita"><button class="fav-btn" type="button" data-favourite="biryani" aria-label="Favourite Biryani"><i data-lucide="heart"></i></button>
-       </div>
-       <div class="recipe-content">
-        <span class="tag" data-i18n="categoryMain">Main Dishes</span>
-        <h3 data-template-id="recipe-biryani-title" class="canva-text recipe-name" style="color: rgb(23, 107, 69); font-weight: 700;">Biryani</h3>
-        <p data-template-id="recipe-biryani-description" class="canva-text recipe-description" style="color: rgb(94, 105, 95);">Fragrant basmati rice layered with tender chicken and warm spices.</p>
-        <div class="meta">
-         <span>⏱️ <b class="recipe-time">1 hr 30 min</b></span><span>◉ <b class="recipe-difficulty">Medium</b></span>
-        </div><button data-template-id="recipe-biryani-button" class="canva-button view-btn" type="button" data-view="biryani" data-i18n="viewRecipe" style="background: rgb(23, 107, 69); color: rgb(255, 255, 255); font-weight: 800;">View Recipe</button>
-       </div>
-      </article>
-      <article data-template-id="recipe-nihari-card" class="canva-card recipe-card" data-recipe="nihari" data-category="slow" style="background: rgb(255, 253, 249);">
-       <div class="food-image-wrap">
-        <img data-template-id="recipe-nihari-image" class="canva-image food-image" loading="lazy" src="https://images.pexels.com/photos/30203312/pexels-photo-30203312.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Delicious spicy lamb curry garnished with fresh cilantro and lemon in a traditional dish"><button class="fav-btn" type="button" data-favourite="nihari" aria-label="Favourite Nihari"><i data-lucide="heart"></i></button>
-       </div>
-       <div class="recipe-content">
-        <span class="tag" data-i18n="categorySlow">Slow Cooked</span>
-        <h3 data-template-id="recipe-nihari-title" class="canva-text recipe-name" style="color: rgb(23, 107, 69); font-weight: 700;">Nihari</h3>
-        <p data-template-id="recipe-nihari-description" class="canva-text recipe-description" style="color: rgb(94, 105, 95);">A rich, slow-cooked meat stew finished with ginger and fresh herbs.</p>
-        <div class="meta">
-         <span>⏱️ <b class="recipe-time">4 hr</b></span><span>◉ <b class="recipe-difficulty">Medium</b></span>
-        </div><button data-template-id="recipe-nihari-button" class="canva-button view-btn" type="button" data-view="nihari" data-i18n="viewRecipe" style="background: rgb(23, 107, 69); color: rgb(255, 255, 255); font-weight: 800;">View Recipe</button>
-       </div>
-      </article>
-      <article data-template-id="recipe-karahi-card" class="canva-card recipe-card" data-recipe="karahi" data-category="main" style="background: rgb(255, 253, 249);">
-       <div class="food-image-wrap">
-        <img data-template-id="recipe-karahi-image" class="canva-image food-image" loading="lazy" src="https://images.pexels.com/photos/37180958/pexels-photo-37180958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Close-up of spicy chicken curry in a wok, garnished with fresh cilantro leaves"><button class="fav-btn" type="button" data-favourite="karahi" aria-label="Favourite Chicken Karahi"><i data-lucide="heart"></i></button>
-       </div>
-       <div class="recipe-content">
-        <span class="tag" data-i18n="categoryMain">Main Dishes</span>
-        <h3 data-template-id="recipe-karahi-title" class="canva-text recipe-name" style="color: rgb(23, 107, 69); font-weight: 700;">Chicken Karahi</h3>
-        <p data-template-id="recipe-karahi-description" class="canva-text recipe-description" style="color: rgb(94, 105, 95);">Tomato-forward chicken curry with green chillies and bold karahi masala.</p>
-        <div class="meta">
-         <span>⏱️ <b class="recipe-time">45 min</b></span><span>◉ <b class="recipe-difficulty">Easy</b></span>
-        </div><button data-template-id="recipe-karahi-button" class="canva-button view-btn" type="button" data-view="karahi" data-i18n="viewRecipe" style="background: rgb(23, 107, 69); color: rgb(255, 255, 255); font-weight: 800;">View Recipe</button>
-       </div>
-      </article>
-      <article data-template-id="recipe-haleem-card" class="canva-card recipe-card" data-recipe="haleem" data-category="slow" style="background: rgb(255, 253, 249);">
-       <div class="food-image-wrap">
-        <img data-template-id="recipe-haleem-image" class="canva-image food-image" loading="lazy" src="https://images.pexels.com/photos/29850843/pexels-photo-29850843.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Delicious homemade lentil soup in a terra cotta bowl"><button class="fav-btn" type="button" data-favourite="haleem" aria-label="Favourite Haleem"><i data-lucide="heart"></i></button>
-       </div>
-       <div class="recipe-content">
-        <span class="tag" data-i18n="categorySlow">Slow Cooked</span>
-        <h3 data-template-id="recipe-haleem-title" class="canva-text recipe-name" style="color: rgb(23, 107, 69); font-weight: 700;">Haleem</h3>
-        <p data-template-id="recipe-haleem-description" class="canva-text recipe-description" style="color: rgb(94, 105, 95);">Silky wheat, lentils and meat cooked low and slow into a hearty bowl.</p>
-        <div class="meta">
-         <span>⏱️ <b class="recipe-time">3 hr</b></span><span>◉ <b class="recipe-difficulty">Medium</b></span>
-        </div><button data-template-id="recipe-haleem-button" class="canva-button view-btn" type="button" data-view="haleem" data-i18n="viewRecipe" style="background: rgb(23, 107, 69); color: rgb(255, 255, 255); font-weight: 800;">View Recipe</button>
-       </div>
-      </article>
-      <article data-template-id="recipe-tikka-card" class="canva-card recipe-card" data-recipe="tikka" data-category="bbq" style="background: rgb(255, 253, 249);">
-       <div class="food-image-wrap">
-        <img data-template-id="recipe-tikka-image" class="canva-image food-image" loading="lazy" src="https://images.pexels.com/photos/29173114/pexels-photo-29173114.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A flavorful chicken tikka dish served with green chutney and garnishes on a white platter"><button class="fav-btn" type="button" data-favourite="tikka" aria-label="Favourite Chicken Tikka"><i data-lucide="heart"></i></button>
-       </div>
-       <div class="recipe-content">
-        <span class="tag" data-i18n="categoryBbq">BBQ &amp; Grill</span>
-        <h3 data-template-id="recipe-tikka-title" class="canva-text recipe-name" style="color: rgb(23, 107, 69); font-weight: 700;">Chicken Tikka</h3>
-        <p data-template-id="recipe-tikka-description" class="canva-text recipe-description" style="color: rgb(94, 105, 95);">Charred, yogurt-marinated chicken with smoky spices and mint chutney.</p>
-        <div class="meta">
-         <span>⏱️ <b class="recipe-time">50 min</b></span><span>◉ <b class="recipe-difficulty">Easy</b></span>
-        </div><button data-template-id="recipe-tikka-button" class="canva-button view-btn" type="button" data-view="tikka" data-i18n="viewRecipe" style="background: rgb(23, 107, 69); color: rgb(255, 255, 255); font-weight: 800;">View Recipe</button>
-       </div>
-      </article>
-      <article data-template-id="recipe-gulab-card" class="canva-card recipe-card" data-recipe="gulab" data-category="dessert" style="background: rgb(255, 253, 249);">
-       <div class="food-image-wrap">
-        <img data-template-id="recipe-gulab-image" class="canva-image food-image" loading="lazy" src="https://images.pexels.com/photos/7406887/pexels-photo-7406887.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Delicious close-up of gulab jamun sweets in a stainless bowl"><button class="fav-btn" type="button" data-favourite="gulab" aria-label="Favourite Gulab Jamun"><i data-lucide="heart"></i></button>
-       </div>
-       <div class="recipe-content">
-        <span class="tag" data-i18n="categoryDessert">Desserts</span>
-        <h3 data-template-id="recipe-gulab-title" class="canva-text recipe-name" style="color: rgb(23, 107, 69); font-weight: 700;">Gulab Jamun</h3>
-        <p data-template-id="recipe-gulab-description" class="canva-text recipe-description" style="color: rgb(94, 105, 95);">Golden milk dumplings soaked in cardamom and rose-scented syrup.</p>
-        <div class="meta">
-         <span>⏱️ <b class="recipe-time">40 min</b></span><span>◉ <b class="recipe-difficulty">Easy</b></span>
-        </div><button data-template-id="recipe-gulab-button" class="canva-button view-btn" type="button" data-view="gulab" data-i18n="viewRecipe" style="background: rgb(23, 107, 69); color: rgb(255, 255, 255); font-weight: 800;">View Recipe</button>
-       </div>
-      </article>
-     </div>
-     <div id="no-results" class="no-results" aria-live="polite"></div>
-    </section>
-    <section id="favourites" class="section">
-     <div class="section-top">
-      <div>
-       <p data-template-id="favourites-kicker" class="canva-text section-kicker" data-i18n="favouritesKicker" style="color: rgb(242, 140, 40); font-weight: 800;">YOUR KITCHEN LIST</p>
-       <h2 data-template-id="favourites-title" class="canva-text" data-i18n="favouritesTitle" style="color: rgb(23, 107, 69); font-weight: 800;">Your favourites</h2>
-      </div>
-      <p data-template-id="favourites-copy" class="canva-text subcopy" data-i18n="favouritesCopy" style="color: rgb(100, 112, 104);">Tap a heart on any recipe to keep it close while you decide what to cook.</p>
-     </div>
-     <div data-template-id="favourites-panel" class="canva-panel favourites-panel" style="background: linear-gradient(135deg, rgb(255, 253, 249), rgb(247, 234, 216));">
-      <div data-template-id="favourite-stat" class="canva-card fav-stat" style="background: rgb(23, 107, 69); color: rgb(255, 255, 255);">
-       <span data-i18n="savedRecipes">Saved recipes</span><strong id="favourite-count">0</strong><span data-i18n="favouriteHint">Ready when you are.</span>
-      </div>
-      <div id="favourite-list" class="fav-list">
-       <p data-template-id="favourite-empty" class="canva-text fav-empty" data-i18n="favouriteEmpty" style="color: rgb(117, 108, 97);">No favourites yet. Tap the heart on a recipe you want to save.</p>
-      </div>
-     </div>
-    </section>
-   </main>
-   <footer data-template-id="site-footer" class="canva-footer" style="background: rgb(29, 43, 36);">
-    <p data-template-id="footer-text" class="canva-text" style="color: rgb(233, 240, 233); font-weight: 400; font-style: normal; font-size: 16px;">© 2026 Hamza's Kitchen. All rights reserved.</p>
-   </footer>
-  </div>
-  <div id="recipe-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-   <div class="modal-card"><button data-template-id="modal-close-button" class="canva-button modal-close" id="modal-close" type="button" aria-label="Close recipe" style="background: rgb(255, 253, 249); color: rgb(23, 107, 69);"><i data-lucide="x"></i></button> <img id="modal-image" class="modal-image" alt="">
-    <div class="modal-body">
-     <h2 id="modal-title"></h2>
-     <p id="modal-meta" class="modal-meta"></p>
-     <div class="detail-grid">
-      <div>
-       <h3 id="ingredients-heading"></h3>
-       <ul id="ingredients-list"></ul>
-      </div>
-      <div>
-       <h3 id="method-heading"></h3>
-       <ol id="method-list"></ol>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
-  <script src="/_sdk/0aac212797dcb9a6.editing_sdk.js" integrity="sha512-U1Z5TGB/MTX0fFSADhP7rVM3+UzJJjKTapiY1vm1cxcbcyWo4eBuCJNJO6zARJ5kHopP9UvWNtPszOqzRc1ICA=="></script>
-  <script>
-    const translations = {
-      en: {
-        navHome:"Home", navRecipes:"Recipes", navCategories:"Categories", navFavourites:"Favourites",
-        heroEyebrow:"PAKISTANI FLAVOURS, MADE SIMPLE", heroTitle:"Cook. Taste. Enjoy.", heroDescription:"Discover beloved Pakistani recipes, explained step by step for every home kitchen.",
-        heroBadge:"6 kitchen-tested favourites", searchButton:"Search", searchPlaceholder:"Search recipes...", categoriesKicker:"FIND YOUR CRAVING", categoriesTitle:"Explore Categories", categoriesCopy:"Choose a category to bring the best dishes to your table.",
-        categoryAll:"All Recipes", categoryMain:"Main Dishes", categorySlow:"Slow Cooked", categoryBbq:"BBQ & Grill", categoryDessert:"Desserts",
-        recipesKicker:"THE RECIPE BOOK", recipesTitle:"Made for your table", recipesCopy:"Six comforting classics, from fragrant rice to syrup-soaked sweets.",
-        viewRecipe:"View Recipe", favouritesKicker:"YOUR KITCHEN LIST", favouritesTitle:"Your favourites", favouritesCopy:"Tap a heart on any recipe to keep it close while you decide what to cook.",
-        savedRecipes:"Saved recipes", favouriteHint:"Ready when you are.", favouriteEmpty:"No favourites yet. Tap the heart on a recipe you want to save.",
-        noResults:"No recipes found. Try another dish or choose a category.", results:"recipe(s) found", ingredients:"Ingredients", method:"Method", close:"Close recipe", easy:"Easy", medium:"Medium"
-      },
-      ur: {
-        navHome:"ہوم", navRecipes:"تراکیب", navCategories:"اقسام", navFavourites:"پسندیدہ",
-        heroEyebrow:"پاکستانی ذائقے، آسان طریقے", heroTitle:"پکائیں، چکھیں، لطف اٹھائیں۔", heroDescription:"گھر کے ہر کچن کے لیے آسان مرحلہ وار طریقوں کے ساتھ پاکستانی تراکیب دریافت کریں۔",
-        heroBadge:"6 آزمودہ پسندیدہ تراکیب", searchButton:"تلاش", searchPlaceholder:"ترکیب تلاش کریں...", categoriesKicker:"اپنی پسند منتخب کریں", categoriesTitle:"اقسام دریافت کریں", categoriesCopy:"اپنی میز کے لیے بہترین پکوان منتخب کرنے کے لیے کسی قسم پر کلک کریں۔",
-        categoryAll:"تمام تراکیب", categoryMain:"اہم پکوان", categorySlow:"آہستہ پکی ہوئی", categoryBbq:"باربی کیو اور گرل", categoryDessert:"مٹھائیاں",
-        recipesKicker:"ترکیبوں کی کتاب", recipesTitle:"آپ کی میز کے لیے", recipesCopy:"خوشبودار چاول سے لے کر میٹھی چاشنی تک چھ مزیدار کلاسکس۔",
-        viewRecipe:"ترکیب دیکھیں", favouritesKicker:"آپ کی کچن لسٹ", favouritesTitle:"آپ کی پسندیدہ تراکیب", favouritesCopy:"جب فیصلہ کرنا ہو کہ کیا پکائیں، کسی بھی ترکیب کے دل پر کلک کر کے اسے محفوظ کریں۔",
-        savedRecipes:"محفوظ تراکیب", favouriteHint:"جب چاہیں تیار۔", favouriteEmpty:"ابھی کوئی پسندیدہ ترکیب نہیں۔ محفوظ کرنے کے لیے کسی ترکیب کے دل پر کلک کریں۔",
-        noResults:"کوئی ترکیب نہیں ملی۔ کوئی اور ڈش تلاش کریں یا قسم منتخب کریں۔", results:"ترکیبیں ملیں", ingredients:"اجزاء", method:"ترکیب", close:"ترکیب بند کریں", easy:"آسان", medium:"درمیانہ"
-      }
-    };
 
-    const recipes = {
-      biryani:{category:"main", image:"https://images.pexels.com/photos/9609860/pexels-photo-9609860.jpeg?auto=compress&cs=tinysrgb&w=800", en:{name:"Biryani",description:"Fragrant basmati rice layered with tender chicken and warm spices.",time:"1 hr 30 min",difficulty:"Medium",ingredients:["Basmati rice","Chicken pieces","Biryani masala","Yogurt and onions","Fresh mint and coriander"],steps:["Fry onions until deeply golden.","Marinate chicken with yogurt and spices.","Parboil rice with whole spices.","Layer chicken and rice, then steam until tender."]},ur:{name:"بریانی",description:"نرم چکن اور خوشبودار مصالحوں کے ساتھ تہہ دار باسمتی چاول۔",time:"1 گھنٹہ 30 منٹ",difficulty:"درمیانہ",ingredients:["باسمتی چاول","چکن کے ٹکڑے","بریانی مصالحہ","دہی اور پیاز","تازہ پودینہ اور دھنیا"],steps:["پیاز کو سنہری ہونے تک تلیں۔","چکن کو دہی اور مصالحوں کے ساتھ میرینیٹ کریں۔","چاولوں کو ثابت مصالحوں کے ساتھ ابالیں۔","چکن اور چاول کی تہیں لگا کر دم پر پکائیں۔"]}},
-      nihari:{category:"slow", image:"https://images.pexels.com/photos/30203312/pexels-photo-30203312.jpeg?auto=compress&cs=tinysrgb&w=800", en:{name:"Nihari",description:"A rich, slow-cooked meat stew finished with ginger and fresh herbs.",time:"4 hr",difficulty:"Medium",ingredients:["Beef or mutton","Nihari masala","Wheat flour","Ginger julienne","Lemon and coriander"],steps:["Brown meat with onions and spices.","Add water and simmer gently until tender.","Whisk flour with water and stir in to thicken.","Garnish generously before serving."]},ur:{name:"نہاری",description:"ادرک اور تازہ جڑی بوٹیوں سے سجی گہری اور آہستہ پکی ہوئی گوشت کی نہاری۔",time:"4 گھنٹے",difficulty:"درمیانہ",ingredients:["بیف یا مٹن","نہاری مصالحہ","گندم کا آٹا","ادرک کی باریک کترن","لیموں اور دھنیا"],steps:["گوشت کو پیاز اور مصالحوں کے ساتھ بھونیں۔","پانی ڈال کر نرم ہونے تک ہلکی آنچ پر پکائیں۔","آٹے کو پانی میں گھول کر گاڑھا کرنے کے لیے شامل کریں۔","پیش کرنے سے پہلے خوب گارنش کریں۔"]}},
-      karahi:{category:"main", image:"https://images.pexels.com/photos/37180958/pexels-photo-37180958.jpeg?auto=compress&cs=tinysrgb&w=800", en:{name:"Chicken Karahi",description:"Tomato-forward chicken curry with green chillies and bold karahi masala.",time:"45 min",difficulty:"Easy",ingredients:["Chicken pieces","Fresh tomatoes","Green chillies","Ginger garlic paste","Karahi masala"],steps:["Sear chicken in hot oil.","Add ginger garlic and cook briefly.","Add tomatoes and spices, then cook until glossy.","Finish with chillies, coriander and ginger."]},ur:{name:"چکن کڑاہی",description:"تازہ ٹماٹروں، ہری مرچوں اور بھرپور کڑاہی مصالحے والی چکن کری۔",time:"45 منٹ",difficulty:"آسان",ingredients:["چکن کے ٹکڑے","تازہ ٹماٹر","ہری مرچیں","ادرک لہسن پیسٹ","کڑاہی مصالحہ"],steps:["گرم تیل میں چکن کو بھونیں۔","ادرک لہسن شامل کر کے مختصر پکائیں۔","ٹماٹر اور مصالحے ڈال کر چمک آنے تک پکائیں۔","مرچ، دھنیا اور ادرک کے ساتھ مکمل کریں۔"]}},
-      haleem:{category:"slow", image:"https://images.pexels.com/photos/29850843/pexels-photo-29850843.jpeg?auto=compress&cs=tinysrgb&w=800", en:{name:"Haleem",description:"Silky wheat, lentils and meat cooked low and slow into a hearty bowl.",time:"3 hr",difficulty:"Medium",ingredients:["Boneless chicken","Cracked wheat","Mixed lentils","Haleem spice mix","Fried onions"],steps:["Soak wheat and lentils well.","Cook meat until falling apart.","Cook grains and lentils until soft.","Blend together and garnish with onions and lemon."]},ur:{name:"حلیم",description:"گندم، دالوں اور گوشت سے تیار کی گئی نرم اور بھرپور حلیم۔",time:"3 گھنٹے",difficulty:"درمیانہ",ingredients:["بون لیس چکن","دلیا گندم","مکس دالیں","حلیم مصالحہ","تلی ہوئی پیاز"],steps:["گندم اور دالوں کو اچھی طرح بھگوئیں۔","گوشت کو گلنے تک پکائیں۔","دانے اور دالیں نرم ہونے تک پکائیں۔","سب کو یکجا کر کے پیاز اور لیموں سے گارنش کریں۔"]}},
-      tikka:{category:"bbq", image:"https://images.pexels.com/photos/29173114/pexels-photo-29173114.jpeg?auto=compress&cs=tinysrgb&w=800", en:{name:"Chicken Tikka",description:"Charred, yogurt-marinated chicken with smoky spices and mint chutney.",time:"50 min",difficulty:"Easy",ingredients:["Chicken cubes","Thick yogurt","Tikka masala","Lemon juice","Mint chutney"],steps:["Mix yogurt, spice mix and lemon.","Coat chicken and marinate.","Skewer chicken and grill until charred.","Serve with onion rings and chutney."]},ur:{name:"چکن تکہ",description:"دہی اور مصالحوں میں میرینیٹ کیا ہوا دھواں دار گرل چکن، پودینے کی چٹنی کے ساتھ۔",time:"50 منٹ",difficulty:"آسان",ingredients:["چکن کی بوٹیاں","گاڑھا دہی","تکہ مصالحہ","لیموں کا رس","پودینے کی چٹنی"],steps:["دہی، مصالحہ اور لیموں مکس کریں۔","چکن کو میرینیٹ کریں۔","سیخوں پر لگا کر گرل کریں۔","پیاز اور چٹنی کے ساتھ پیش کریں۔"]}},
-      gulab:{category:"dessert", image:"https://images.pexels.com/photos/7406887/pexels-photo-7406887.jpeg?auto=compress&cs=tinysrgb&w=800", en:{name:"Gulab Jamun",description:"Golden milk dumplings soaked in cardamom and rose-scented syrup.",time:"40 min",difficulty:"Easy",ingredients:["Milk powder","Plain flour","Ghee","Sugar","Cardamom and rose water"],steps:["Make a soft dough with milk powder.","Roll into small smooth balls.","Fry on low heat until golden.","Soak in warm cardamom syrup."]},ur:{name:"گلاب جامن",description:"الائچی اور گلاب کی خوشبو والی چاشنی میں ڈوبے سنہری دودھ کے نرم گولے۔",time:"40 منٹ",difficulty:"آسان",ingredients:["ملک پاؤڈر","میدہ","گھی","چینی","الائچی اور گلاب کا عرق"],steps:["ملک پاؤڈر سے نرم آٹا تیار کریں۔","چھوٹے ہموار گولے بنائیں۔","ہلکی آنچ پر سنہری ہونے تک تلیں۔","گرم الائچی کی چاشنی میں بھگو دیں۔"]}}
-    };
-
-    let language = "en";
-    let category = "all";
-    let favourites = new Set();
-    let activeRecipe = null;
-
-    function updateLanguage() {
-      const t = translations[language];
-      document.documentElement.lang = language === "ur" ? "ur" : "en";
-      document.documentElement.dir = language === "ur" ? "rtl" : "ltr";
-      document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t[el.dataset.i18n]; });
-      document.getElementById("search-input").placeholder = t.searchPlaceholder;
-      document.getElementById("en").classList.toggle("active", language === "en");
-      document.getElementById("ur").classList.toggle("active", language === "ur");
-      document.getElementById("en").setAttribute("aria-pressed", String(language === "en"));
-      document.getElementById("ur").setAttribute("aria-pressed", String(language === "ur"));
-
-      document.querySelectorAll(".recipe-card").forEach(card => {
-        const recipe = recipes[card.dataset.recipe][language];
-        card.querySelector(".recipe-name").textContent = recipe.name;
-        card.querySelector(".recipe-description").textContent = recipe.description;
-        card.querySelector(".recipe-time").textContent = recipe.time;
-        card.querySelector(".recipe-difficulty").textContent = recipe.difficulty;
-      });
-      updateFavouriteArea();
-      if (activeRecipe) openRecipe(activeRecipe);
-      filterRecipes();
-    }
-
-    function filterRecipes() {
-      const query = document.getElementById("search-input").value.trim().toLowerCase();
-      let visible = 0;
-      document.querySelectorAll(".recipe-card").forEach(card => {
-        const id = card.dataset.recipe;
-        const recipe = recipes[id];
-        const localized = recipe[language];
-        const matchesCategory = category === "all" || recipe.category === category;
-        const haystack = [localized.name, localized.description, recipe.en.name, recipe.ur.name].join(" ").toLowerCase();
-        const matchesQuery = !query || haystack.includes(query);
-        const show = matchesCategory && matchesQuery;
-        card.classList.toggle("hidden-card", !show);
-        if (show) visible++;
-      });
-      const noResults = document.getElementById("no-results");
-      noResults.style.display = visible ? "none" : "block";
-      noResults.textContent = translations[language].noResults;
-      const status = document.getElementById("search-status");
-      status.textContent = query ? ${visible} ${translations[language].results} : "";
-    }
-
-    function updateFavouriteArea() {
-      const t = translations[language];
-      document.getElementById("favourite-count").textContent = favourites.size;
-      const list = document.getElementById("favourite-list");
-      list.innerHTML = "";
-      if (!favourites.size) {
-        const message = document.createElement("p");
-        message.className = "fav-empty";
-        message.textContent = t.favouriteEmpty;
-        list.appendChild(message);
-      } else {
-        favourites.forEach(id => {
-          const chip = document.createElement("span");
-          chip.className = "fav-chip";
-          chip.textContent = "♥️ " + recipes[id][language].name;
-          list.appendChild(chip);
-        });
-      }
-      document.querySelectorAll("[data-favourite]").forEach(button => {
-        const selected = favourites.has(button.dataset.favourite);
-        button.classList.toggle("is-favourite", selected);
-        button.setAttribute("aria-pressed", String(selected));
-        button.setAttribute("aria-label", ${selected ? "Remove" : "Add"} ${recipes[button.dataset.favourite][language].name} ${language === "ur" ? "پسندیدہ" : "favourite"});
-      });
-    }
-
-    function openRecipe(id) {
-      activeRecipe = id;
-      const recipe = recipes[id][language];
-      const modal = document.getElementById("recipe-modal");
-      document.getElementById("modal-image").src = recipes[id].image;
-      document.getElementById("modal-image").alt = recipe.name;
-      document.getElementById("modal-title").textContent = recipe.name;
-      document.getElementById("modal-meta").textContent = ⏱️ ${recipe.time}  •  ◉ ${recipe.difficulty};
-      document.getElementById("ingredients-heading").textContent = translations[language].ingredients;
-      document.getElementById("method-heading").textContent = translations[language].method;
-      document.getElementById("modal-close").setAttribute("aria-label", translations[language].close);
-      document.getElementById("ingredients-list").innerHTML = recipe.ingredients.map(item => <li>${item}</li>).join("");
-      document.getElementById("method-list").innerHTML = recipe.steps.map(item => <li>${item}</li>).join("");
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden","false");
-      document.getElementById("modal-close").focus();
-    }
-
-    function closeRecipe() {
-      activeRecipe = null;
-      const modal = document.getElementById("recipe-modal");
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden","true");
-    }
-
-    document.getElementById("en").addEventListener("click", () => { language = "en"; updateLanguage(); });
-    document.getElementById("ur").addEventListener("click", () => { language = "ur"; updateLanguage(); });
-    document.getElementById("recipe-search-form").addEventListener("submit", event => { event.preventDefault(); filterRecipes(); document.getElementById("recipes").scrollIntoView({behavior:"smooth",block:"start"}); });
-    document.getElementById("search-input").addEventListener("input", filterRecipes);
-
-    document.querySelectorAll(".category").forEach(button => {
-      button.addEventListener("click", () => {
-        category = button.dataset.category;
-        document.querySelectorAll(".category").forEach(item => item.classList.toggle("active", item === button));
-        filterRecipes();
-        document.getElementById("recipes").scrollIntoView({behavior:"smooth",block:"start"});
-      });
-    });
-
-    document.querySelectorAll("[data-favourite]").forEach(button => {
-      button.addEventListener("click", () => {
-        const id = button.dataset.favourite;
-        favourites.has(id) ? favourites.delete(id) : favourites.add(id);
-        updateFavouriteArea();
-      });
-    });
-
-    document.querySelectorAll("[data-view]").forEach(button => button.addEventListener("click", () => openRecipe(button.dataset.view)));
-    document.getElementById("modal-close").addEventListener("click", closeRecipe);
-    document.getElementById("recipe-modal").addEventListener("click", event => { if (event.target.id === "recipe-modal") closeRecipe(); });
-    document.addEventListener("keydown", event => { if (event.key === "Escape") closeRecipe(); });
-
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener("click", event => {
-        const target = document.querySelector(link.getAttribute("href"));
-        if (!target) return;
-        event.preventDefault();
-        target.scrollIntoView({behavior:"smooth",block:"start"});
-        document.getElementById("mobile-nav").classList.remove("open");
-        document.getElementById("menu-button").setAttribute("aria-expanded","false");
-      });
-    });
-
-    document.getElementById("menu-button").addEventListener("click", () => {
-      const menu = document.getElementById("mobile-nav");
-      const isOpen = menu.classList.toggle("open");
-      document.getElementById("menu-button").setAttribute("aria-expanded", String(isOpen));
-    });
-
-    lucide.createIcons();
-    updateLanguage();
-  </script>
- 
-</body></html>
+</body>
+</html>
