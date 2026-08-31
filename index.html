@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hamza's Kitchen</title>
-<style>
+</style>
 :root{--green:#176b45;--green2:#0f5135;--orange:#f28c28;--cream:#fff8ee;--dark:#1d2b24}
 *{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:var(--cream);color:var(--dark)}
 header{position:sticky;top:0;z-index:10;background:white;box-shadow:0 2px 12px #0001}
@@ -19,7 +19,10 @@ nav a{margin:0 8px;text-decoration:none;color:#444;font-weight:600}
 .search{display:flex;background:white;padding:6px;border-radius:30px;max-width:580px;margin-top:25px}
 .search input{border:0;outline:0;padding:14px 18px;flex:1;border-radius:30px;font-size:16px}
 .search button{border:0;border-radius:25px;background:var(--orange);color:white;padding:0 22px;font-weight:bold;cursor:pointer}
-.hero-card{font-size:110px;text-align:center;background:#ffffff18;border:1px solid #ffffff33;border-radius:30px;padding:35px}
+.hero-card{display:flex;gap:15px;justify-content:center;background:#ffffff18;border:1px solid #ffffff33;border-radius:30px;padding:20px}
+.hero-food-item{text-align:center;color:white}
+.hero-food-item img{width:80px;height:80px;object-fit:cover;border-radius:50%;border:3px solid #f28c28}
+.hero-food-item p{margin-top:6px;font-size:13px;font-weight:bold}
 section{max-width:1150px;margin:0 auto;padding:45px 20px}h2{font-size:30px;margin-top:0}.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
 .cat{background:white;border-radius:18px;padding:22px;text-align:center;box-shadow:0 6px 18px #0000000c;font-weight:bold;font-size:17px}
 .recipes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -52,8 +55,22 @@ footer{background:var(--dark);color:white;padding:35px 20px;text-align:center}
 <div class="hero"><div class="hero-in">
 <div><h1 data-en="Cook. Taste. Enjoy." data-ur="پکائیں، چکھیں، لطف اٹھائیں۔">Cook. Taste. Enjoy.</h1>
 <p data-en="Discover delicious Pakistani and international recipes, explained step by step for every home kitchen." data-ur="مزیدار پاکستانی اور بین الاقوامی تراکیب دریافت کریں، ہر گھر کے باورچی خانے کے لیے آسان مرحلہ وار طریقے کے ساتھ۔">Discover delicious Pakistani and international recipes, explained step by step for every home kitchen.</p>
-<div class="search"><input id="search" placeholder="Search recipes..." data-enph="Search recipes..." data-urph="ترکیب تلاش کریں..."><button onclick="filterRecipes()" data-en="Search" data-ur="تلاش">Search</button></div></div>
-<div class="hero-card">🍛🥘🍲</div></div></div>
+<div class="search"><input id="search" placeholder="Search recipes..." data-enph="Search recipes..." data-urph="ترکیب تلاش کریں..."><button onclick="filterRecipes()" data-en="Search" data-ur="تلاش">Search</button></div></div
+    <div class="hero-card">
+    <div class="hero-food-item">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400" alt="Biryani">
+        <p>Biryani</p>
+    </div>
+    <div class="hero-food-item">
+        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400" alt="Nihari">
+        <p>Nihari</p>
+    </div>
+    <div class="hero-food-item">
+        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400" alt="Karahi">
+        <p>Karahi</p>
+    </div>
+</div>
+        
 
 <section id="categories"><h2 data-en="Explore Categories" data-ur="اقسام دریافت کریں">Explore Categories</h2>
 <div class="cats">
