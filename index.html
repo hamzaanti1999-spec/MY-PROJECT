@@ -1,192 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hamza's Kitchen</title>
-</style>
-:root{--green:#176b45;--green2:#0f5135;--orange:#f28c28;--cream:#fff8ee;--dark:#1d2b24}
-*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:var(--cream);color:var(--dark)}
-header{position:sticky;top:0;z-index:10;background:white;box-shadow:0 2px 12px #0001}
-.nav{max-width:1150px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.logo{font-size:25px;font-weight:800;color:var(--green)} .logo span{color:var(--orange)}
-nav a{margin:0 8px;text-decoration:none;color:#444;font-weight:600}
-.lang button,.fav{border:0;padding:9px 12px;border-radius:20px;cursor:pointer;background:#eee;font-weight:bold}
-.lang button.active{background:var(--green);color:white}
-.hero{background:linear-gradient(110deg,var(--green2),var(--green));color:white;padding:65px 20px}
-.hero-in{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
-.hero h1{font-size:48px;margin:0 0 12px}.hero p{font-size:19px;line-height:1.6}
-.search{display:flex;background:white;padding:6px;border-radius:30px;max-width:580px;margin-top:25px}
-.search input{border:0;outline:0;padding:14px 18px;flex:1;border-radius:30px;font-size:16px}
-.search button{border:0;border-radius:25px;background:var(--orange);color:white;padding:0 22px;font-weight:bold;cursor:pointer}
-.hero-card{display:flex;gap:15px;justify-content:center;background:#ffffff18;border:1px solid #ffffff33;border-radius:30px;padding:20px}
-.hero-food-item{text-align:center;color:white}
-.hero-food-item img{width:80px;height:80px;object-fit:cover;border-radius:50%;border:3px solid #f28c28}
-.hero-food-item p{margin-top:6px;font-size:13px;font-weight:bold}
-section{max-width:1150px;margin:0 auto;padding:45px 20px}h2{font-size:30px;margin-top:0}.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.cat{background:white;border-radius:18px;padding:22px;text-align:center;box-shadow:0 6px 18px #0000000c;font-weight:bold;font-size:17px}
-.recipes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 22px #00000012}
-.food{height:180px;display:flex;align-items:center;justify-content:center;font-size:90px;background:#f4ead9}
-.card-body{padding:18px}.meta{color:#777;font-size:14px;margin:9px 0}
-.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.view{background:var(--green);color:white;border:0;padding:10px 14px;border-radius:10px;cursor:pointer}
-.ad{border:2px dashed #d8b988;background:#fffdf7;color:#9a7845;text-align:center;padding:25px;border-radius:14px;margin:25px 0}
-.detail{background:white;border-radius:24px;margin:25px auto 50px;box-shadow:0 8px 22px #00000012}
-.detail h3{color:var(--green);margin-top:28px}.detail li{margin:10px 0;line-height:1.6}
-.recipe-note{background:#fff7e7;border-left:5px solid var(--orange);padding:14px 18px;border-radius:10px}
-footer{background:var(--dark);color:white;padding:35px 20px;text-align:center}
-[dir="rtl"]{font-family:"Noto Nastaliq Urdu",Arial,sans-serif} [dir="rtl"] .hero-in{text-align:right}
-@media(max-width:800px){nav{display:none}.hero-in{grid-template-columns:1fr}.hero h1{font-size:36px}.cats{grid-template-columns:repeat(2,1fr)}.recipes{grid-template-columns:1fr}.hero-card{font-size:80px}.nav{justify-content:space-between}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza's Kitchen</title>
+    <style>
+        :root{--green:#176b45;--green2:#0f5135;--orange:#f28c28;--cream:#fff8ee;--dark:#1d2b24}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Arial,sans-serif;background:var(--cream);color:var(--dark)}
+        header{position:sticky;top:0;z-index:10;background:white;box-shadow:0 2px 12px #0001}
+        .nav{max-width:1150px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+        .logo{font-size:25px;font-weight:800;color:var(--green)}
+        .logo span{color:var(--orange)}
+        nav a{margin:0 8px;text-decoration:none;color:#444;font-weight:600}
+        .lang button,.fav{border:0;padding:9px 12px;border-radius:20px;cursor:pointer;background:#eee;font-weight:bold}
+        .lang button.active{background:var(--green);color:white}
+        .hero{background:linear-gradient(110deg,var(--green2),var(--green));color:white;padding:65px 20px}
+        .hero-in{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+        .hero h1{font-size:48px;margin:0 0 12px}
+        .hero p{font-size:19px;line-height:1.6}
+        .search{display:flex;background:white;padding:6px;border-radius:30px;max-width:580px;margin-top:25px}
+        .search input{border:0;outline:0;padding:14px 18px;flex:1;border-radius:30px;font-size:16px}
+        .search button{border:0;border-radius:25px;background:var(--orange);color:white;padding:0 22px;font-weight:bold;cursor:pointer}
+        
+        .hero-card{display:flex;gap:15px;justify-content:center;background:#ffffff18;border:1px solid #ffffff33;border-radius:30px;padding:20px}
+        .hero-food-item{text-align:center;color:white}
+        .hero-food-item img{width:80px;height:80px;object-fit:cover;border-radius:50%;border:3px solid #f28c28}
+        .hero-food-item p{margin-top:6px;font-size:13px;font-weight:bold}
+
+        section{max-width:1150px;margin:0 auto;padding:45px 20px}
+        h2{font-size:30px;margin-top:0}
+        .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+        .cat{background:white;border-radius:18px;padding:22px;text-align:center;box-shadow:0 6px 18px #0000000c;font-weight:bold}
+        .recipes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+        .card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 22px #00000012}
+        .food{height:180px;display:flex;align-items:center;justify-content:center;font-size:90px;background:#f4ead9}
+        .card-body{padding:18px}
+        .meta{color:#777;font-size:14px;margin:9px 0}
+        .row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+        .view{background:var(--green);color:white;border:0;padding:10px 14px;border-radius:10px;cursor:pointer}
+        .ad{border:2px dashed #d8b988;background:#fffdf7;color:#9a7845;text-align:center;padding:25px;border-radius:14px;margin:25px 0}
+        .detail{background:white;border-radius:24px;margin:25px auto 50px;box-shadow:0 8px 22px #00000012}
+        .detail h3{color:var(--green);margin-top:28px}
+        .detail li{margin:10px 0;line-height:1.6}
+        .recipe-note{background:#fff7e7;border-left:5px solid var(--orange);padding:14px 18px;border-radius:10px}
+        footer{background:var(--dark);color:white;padding:35px 20px;text-align:center}
+        [dir="rtl"]{font-family:"Noto Nastaliq Urdu",Arial,sans-serif}
+        [dir="rtl"] .hero-in{text-align:right}
+        @media(max-width:800px){.nav{display:none}.hero-in{grid-template-columns:1fr}.hero h1{font-size:36px}.cats{grid-template-columns:repeat(2,1fr)}.recipes{grid-template-columns:1fr}}
+    </style>
 </head>
 <body>
-<header><div class="nav">
-<div class="logo">Hamza's <span>Kitchen</span> 🍲</div>
-<nav>
-<a href="#home" data-en="Home" data-ur="ہوم">Home</a>
-<a href="#recipes" data-en="Recipes" data-ur="تراکیب">Recipes</a>
-<a href="#categories" data-en="Categories" data-ur="اقسام">Categories</a>
-<a href="#favorites" data-en="Favourites" data-ur="پسندیدہ">Favourites</a>
-</nav>
-<div class="lang"><button id="en" class="active">English</button><button id="ur">اردو</button></div>
-</div></header>
 
-<main id="home">
-<div class="hero"><div class="hero-in">
-<div><h1 data-en="Cook. Taste. Enjoy." data-ur="پکائیں، چکھیں، لطف اٹھائیں۔">Cook. Taste. Enjoy.</h1>
-<p data-en="Discover delicious Pakistani and international recipes, explained step by step for every home kitchen." data-ur="مزیدار پاکستانی اور بین الاقوامی تراکیب دریافت کریں، ہر گھر کے باورچی خانے کے لیے آسان مرحلہ وار طریقے کے ساتھ۔">Discover delicious Pakistani and international recipes, explained step by step for every home kitchen.</p>
-<div class="search"><input id="search" placeholder="Search recipes..." data-enph="Search recipes..." data-urph="ترکیب تلاش کریں..."><button onclick="filterRecipes()" data-en="Search" data-ur="تلاش">Search</button></div></div
-    <div class="hero-card">
-    <div class="hero-food-item">
-        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400" alt="Biryani">
-        <p>Biryani</p>
-    </div>
-    <div class="hero-food-item">
-        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400" alt="Nihari">
-        <p>Nihari</p>
-    </div>
-    <div class="hero-food-item">
-        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400" alt="Karahi">
-        <p>Karahi</p>
-    </div>
-</div>
-        
+    <header>
+        <div class="nav">
+            <div class="logo">Hamza's <span>Kitchen</span> 🍲</div>
+            <nav>
+                <a href="#home" data-en="Home" data-ur="ہوم">Home</a>
+                <a href="#recipes" data-en="Recipes" data-ur="تراکیب">Recipes</a>
+                <a href="#categories" data-en="Categories" data-ur="اقسام">Categories</a>
+                <a href="#favorites" data-en="Favourites" data-ur="پسندیدہ">Favourites</a>
+            </nav>
+            <div class="lang">
+                <button id="en" class="active">English</button>
+                <button id="ur">اردو</button>
+            </div>
+        </div>
+    </header>
 
-<section id="categories"><h2 data-en="Explore Categories" data-ur="اقسام دریافت کریں">Explore Categories</h2>
-<div class="cats">
-<div class="cat">🍚 <span data-en="Biryani" data-ur="بریانی">Biryani</span></div>
-<div class="cat">🍲 <span data-en="Nihari" data-ur="نہاری">Nihari</span></div>
-<div class="cat">🍗 <span data-en="Karahi" data-ur="کڑاہی">Karahi</span></div>
-<div class="cat">🍰 <span data-en="Desserts" data-ur="میٹھے">Desserts</span></div>
-</div></section>
+    <main id="home">
+        <div class="hero">
+            <div class="hero-in">
+                <div>
+                    <h1 data-en="Cook. Taste. Enjoy." data-ur="پکائیں، چکھیں، لطف اٹھائیں۔">Cook. Taste. Enjoy.</h1>
+                    <p data-en="Discover delicious Pakistani and international recipes, explained step by step for every home kitchen." data-ur="پاکستانی اور بین الاقوامی مزیدار تراکیب، آسان طریقوں کے ساتھ۔">Discover delicious Pakistani and international recipes, explained step by step for every home kitchen.</p>
+                    <div class="search">
+                        <input id="search" placeholder="Search recipes..." data-enph="Search recipes..." data-urph="تلاش کریں...">
+                        <button data-en="Search" data-ur="تلاش">Search</button>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-food-item">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400" alt="Biryani">
+                        <p>Biryani</p>
+                    </div>
+                    <div class="hero-food-item">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400" alt="Nihari">
+                        <p>Nihari</p>
+                    </div>
+                    <div class="hero-food-item">
+                        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400" alt="Karahi">
+                        <p>Karahi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<section id="recipes"><h2 data-en="Popular Recipes" data-ur="مشہور تراکیب">Popular Recipes</h2>
-<div class="ad" data-en="Advertisement space — ready for future AdMob / ad integration" data-ur="اشتہار کی جگہ — مستقبل میں AdMob / اشتہارات کے لیے تیار">Advertisement space — ready for future AdMob / ad integration</div>
-<div class="recipes" id="recipeList">
-<div class="card recipe" data-name="chicken biryani بریانی"><div class="food">🍛</div><div class="card-body"><h3 data-en="Chicken Biryani" data-ur="چکن بریانی">Chicken Biryani</h3><div class="meta" data-en="⏱ 50 min • Easy" data-ur="⏱ 50 منٹ • آسان">⏱ 50 min • Easy</div><div class="row"><button class="view" onclick="document.getElementById('biryani-detail').scrollIntoView({behavior:'smooth'})" data-en="View Recipe" data-ur="ترکیب دیکھیں">View Recipe</button><button class="fav" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button></div></div></div>
-<div class="card recipe" data-name="nihari نہاری"><div class="food">🍲</div><div class="card-body"><h3 data-en="Traditional Nihari" data-ur="روایتی نہاری">Traditional Nihari</h3><div class="meta" data-en="⏱ 3 hrs • Medium" data-ur="⏱ 3 گھنٹے • درمیانہ">⏱ 3 hrs • Medium</div><div class="row"><button class="view" onclick="document.getElementById('nihari-detail').scrollIntoView({behavior:'smooth'})" data-en="View Recipe" data-ur="ترکیب دیکھیں">View Recipe</button><button class="fav" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button></div></div></div>
-<div class="card recipe" data-name="chicken karahi کڑاہی"><div class="food">🍗</div><div class="card-body"><h3 data-en="Chicken Karahi" data-ur="چکن کڑاہی">Chicken Karahi</h3><div class="meta" data-en="⏱ 45 min • Easy" data-ur="⏱ 45 منٹ • آسان">⏱ 45 min • Easy</div><div class="row"><button class="view" data-en="View Recipe" data-ur="ترکیب دیکھیں">View Recipe</button><button class="fav" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button></div></div></div>
-</div></section>
+        <section id="categories">
+            <h2 data-en="Explore Categories" data-ur="اقسام دریافت کریں">Explore Categories</h2>
+            <div class="cats">
+                <div class="cat">🍚 <span data-en="Biryani" data-ur="بریانی">Biryani</span></div>
+                <div class="cat">🍲 <span data-en="Nihari" data-ur="نہاری">Nihari</span></div>
+                <div class="cat">🍗 <span data-en="Karahi" data-ur="کڑاہی">Karahi</span></div>
+                <div class="cat">🍰 <span data-en="Desserts" data-ur="مٹھائیاں">Desserts</span></div>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <p>© 2026 Hamza's Kitchen. All rights reserved.</p>
+    </footer>
 
-<section id="biryani-detail" class="detail">
-  <h2 data-en="Chicken Biryani — Complete Recipe" data-ur="چکن بریانی — مکمل ترکیب">Chicken Biryani — Complete Recipe</h2>
-  <p class="recipe-note" data-en="A layered chicken biryani with fragrant basmati rice, whole spices, yogurt, tomatoes and aloo bukhara." data-ur="خوشبودار باسمتی چاول، ثابت مصالحوں، دہی، ٹماٹر اور آلو بخارے سے تیار کی گئی تہہ دار چکن بریانی۔">A layered chicken biryani with fragrant basmati rice, whole spices, yogurt, tomatoes and aloo bukhara.</p>
-
-  <h3 data-en="Ingredients" data-ur="اجزاء">Ingredients</h3>
-  <ul>
-    <li data-en="2–3 cups aged, long-grain basmati rice, soaked for 30 minutes" data-ur="2 سے 3 کپ پرانے اور لمبے دانے والے باسمتی چاول، 30 منٹ بھگوئے ہوئے">2–3 cups aged, long-grain basmati rice, soaked for 30 minutes</li>
-    <li data-en="Whole spices for boiling rice: bay leaves, green cardamom, cloves and cinnamon sticks" data-ur="چاول ابالنے کے لیے ثابت مصالحے: تیز پتے، سبز الائچی، لونگ اور دار چینی">Whole spices for boiling rice: bay leaves, green cardamom, cloves and cinnamon sticks</li>
-    <li data-en="Salt — a generous amount for parboiling the rice" data-ur="نمک — چاول ابالتے وقت مناسب مقدار میں">Salt — a generous amount for parboiling the rice</li>
-    <li data-en="1 tablespoon oil or ghee for the boiling water" data-ur="ابلتے پانی میں 1 کھانے کا چمچ تیل یا گھی">1 tablespoon oil or ghee for the boiling water</li>
-    <li data-en="500 g to 1 kg bone-in chicken pieces" data-ur="500 گرام سے 1 کلو ہڈی والے چکن کے ٹکڑے">500 g to 1 kg bone-in chicken pieces</li>
-    <li data-en="½–¾ cup plain yogurt, well whisked" data-ur="آدھا سے پونا کپ سادہ دہی، اچھی طرح پھینٹا ہوا">½–¾ cup plain yogurt, well whisked</li>
-    <li data-en="2 tablespoons fresh ginger-garlic paste" data-ur="2 کھانے کے چمچ تازہ ادرک لہسن پیسٹ">2 tablespoons fresh ginger-garlic paste</li>
-    <li data-en="3–4 medium onions, thinly sliced" data-ur="3 سے 4 درمیانی پیاز، باریک کٹی ہوئی">3–4 medium onions, thinly sliced</li>
-    <li data-en="2–3 medium tomatoes, chopped or pureed" data-ur="2 سے 3 درمیانے ٹماٹر، کٹے ہوئے یا پیوری کیے ہوئے">2–3 medium tomatoes, chopped or pureed</li>
-    <li data-en="3–6 green chillies, slit or chopped" data-ur="3 سے 6 ہری مرچیں، چیری ہوئی یا کٹی ہوئی">3–6 green chillies, slit or chopped</li>
-    <li data-en="2 green cardamom pods, 2 black cardamom pods, 5–6 cloves, 2–3 cinnamon pieces and 2 bay leaves" data-ur="2 سبز الائچی، 2 بڑی الائچی، 5 سے 6 لونگ، دار چینی کے 2 سے 3 ٹکڑے اور 2 تیز پتے">2 green cardamom pods, 2 black cardamom pods, 5–6 cloves, 2–3 cinnamon pieces and 2 bay leaves</li>
-    <li data-en="2 tsp red chilli powder, 1 tsp black pepper powder and garam masala to taste" data-ur="2 چائے کے چمچ لال مرچ پاؤڈر، 1 چائے کا چمچ کالی مرچ پاؤڈر اور حسبِ ذائقہ گرم مصالحہ">2 tsp red chilli powder, 1 tsp black pepper powder and garam masala to taste</li>
-    <li data-en="Biryani masala — a little, to taste" data-ur="بریانی مصالحہ — تھوڑا سا، حسبِ ذائقہ">Biryani masala — a little, to taste</li>
-    <li data-en="Aloo bukhara (dried plums), to taste" data-ur="آلو بخارا، حسبِ ضرورت">Aloo bukhara (dried plums), to taste</li>
-    <li data-en="¼ cup cooking oil or ghee for frying and cooking the gravy" data-ur="گریوی پکانے اور فرائی کرنے کے لیے ¼ کپ کوکنگ آئل یا گھی">¼ cup cooking oil or ghee for frying and cooking the gravy</li>
-  </ul>
-
-  <h3 data-en="Cooking Method" data-ur="بنانے کا طریقہ">Cooking Method</h3>
-  <ol>
-    <li data-en="In a pan, add oil, turmeric and ginger-garlic paste. Mix and cook briefly." data-ur="ایک پین میں تیل، ہلدی اور ادرک لہسن پیسٹ ڈال کر تھوڑی دیر مکس کرکے پکائیں۔">In a pan, add oil, turmeric and ginger-garlic paste. Mix and cook briefly.</li>
-    <li data-en="Add sliced onions and cook until slightly brown." data-ur="باریک کٹی پیاز شامل کریں اور ہلکی بھوری ہونے تک پکائیں۔">Add sliced onions and cook until slightly brown.</li>
-    <li data-en="Add the chicken, mix well, cover and cook on low heat for 5–6 minutes. Remove the lid and check that the water has reduced and the chicken is cooked/tender. Set the chicken aside." data-ur="چکن شامل کرکے اچھی طرح مکس کریں، ڈھک کر ہلکی آنچ پر 5 سے 6 منٹ پکائیں۔ ڈھکن ہٹا کر دیکھیں کہ پانی کم ہوگیا ہے اور چکن گل گیا ہے، پھر ایک طرف رکھ دیں۔">Add the chicken, mix well, cover and cook on low heat for 5–6 minutes. Remove the lid and check that the water has reduced and the chicken is cooked/tender. Set the chicken aside.</li>
-    <li data-en="In another pot, heat oil or ghee. Add green chillies, green and black cardamom, whole black pepper, cloves, cinnamon and bay leaves. Fry briefly." data-ur="دوسرے پتیلے میں تیل یا گھی گرم کریں۔ ہری مرچ، سبز و بڑی الائچی، ثابت کالی مرچ، لونگ، دار چینی اور تیز پتے ڈال کر تھوڑی دیر بھونیں۔">In another pot, heat oil or ghee. Add green chillies, green and black cardamom, whole black pepper, cloves, cinnamon and bay leaves. Fry briefly.</li>
-    <li data-en="Add red chilli powder, garam masala and black pepper powder. Add the tomatoes and cook." data-ur="لال مرچ پاؤڈر، گرم مصالحہ اور کالی مرچ پاؤڈر شامل کریں۔ ٹماٹر ڈال کر پکائیں۔">Add red chilli powder, garam masala and black pepper powder. Add the tomatoes and cook.</li>
-    <li data-en="Add the yogurt and mix well. Cook the mixture, then add the prepared chicken and combine with the masala." data-ur="دہی شامل کرکے اچھی طرح مکس کریں اور پکائیں۔ پھر تیار چکن شامل کرکے مصالحے کے ساتھ اچھی طرح مکس کریں۔">Add the yogurt and mix well. Cook the mixture, then add the prepared chicken and combine with the masala.</li>
-    <li data-en="Add aloo bukhara and a little packaged biryani masala." data-ur="آلو بخارا اور تھوڑا سا بازار میں ملنے والا بریانی مصالحہ شامل کریں۔">Add aloo bukhara and a little packaged biryani masala.</li>
-    <li data-en="Boil the soaked basmati rice with the whole spices, salt and 1 tablespoon oil/ghee. Parboil the rice, then drain it." data-ur="بھیگے ہوئے باسمتی چاول ثابت مصالحوں، نمک اور 1 کھانے کے چمچ تیل یا گھی کے ساتھ ابالیں۔ چاول تقریباً تیار ہونے پر پانی نکال دیں۔">Boil the soaked basmati rice with the whole spices, salt and 1 tablespoon oil/ghee. Parboil the rice, then drain it.</li>
-    <li data-en="Layer the rice and chicken gravy: spread a layer of rice, add the chicken gravy over it, then cover with the remaining rice." data-ur="چاول اور چکن گریوی کی تہیں بنائیں: پہلے چاولوں کی تہہ لگائیں، اس کے اوپر چکن گریوی ڈالیں، پھر باقی چاولوں سے ڈھانپ دیں۔">Layer the rice and chicken gravy: spread a layer of rice, add the chicken gravy over it, then cover with the remaining rice.</li>
-    <li data-en="Cover and leave on dum for 5–7 minutes. Your biryani is ready to serve." data-ur="ڈھکن لگا کر 5 سے 7 منٹ دم پر چھوڑ دیں۔ آپ کی بریانی تیار ہے۔">Cover and leave on dum for 5–7 minutes. Your biryani is ready to serve.</li>
-  </ol>
-
-  <p class="recipe-note" data-en="Serve hot. Garnish as desired and enjoy!" data-ur="گرم گرم سرو کریں، حسبِ پسند گارنش کریں اور لطف اٹھائیں!">Serve hot. Garnish as desired and enjoy!</p>
-</section>
-
-<section id="nihari-detail" class="detail">
-  <h2 data-en="Traditional Beef Nihari — Complete Recipe" data-ur="روایتی بیف نہاری — مکمل ترکیب">Traditional Beef Nihari — Complete Recipe</h2>
-  <p class="recipe-note" data-en="Slow-cook this Nihari on low heat until the beef becomes tender and the gravy develops a rich, traditional consistency." data-ur="اس نہاری کو ہلکی آنچ پر پکائیں یہاں تک کہ گوشت اچھی طرح گل جائے اور گریوی گاڑھی اور روایتی ذائقے والی بن جائے۔">Slow-cook this Nihari on low heat until the beef becomes tender and the gravy develops a rich, traditional consistency.</p>
-
-  <h3 data-en="Ingredients" data-ur="اجزاء">Ingredients</h3>
-  <ul>
-    <li data-en="1 kg (about 2 lbs) beef shank" data-ur="1 کلو (تقریباً 2 پاؤنڈ) بیف شینک">1 kg (about 2 lbs) beef shank</li>
-    <li data-en="½ cup cooking oil or clarified butter (ghee)" data-ur="آدھا کپ کوکنگ آئل یا گھی">½ cup cooking oil or clarified butter (ghee)</li>
-    <li data-en="2–4 medium onions, thinly sliced" data-ur="2 سے 4 درمیانی پیاز، باریک کٹی ہوئی">2–4 medium onions, thinly sliced</li>
-    <li data-en="2 tablespoons ginger-garlic paste" data-ur="2 کھانے کے چمچ ادرک لہسن پیسٹ">2 tablespoons ginger-garlic paste</li>
-  </ul>
-
-  <h3 data-en="Nihari Spice Blend" data-ur="نہاری مصالحہ">Nihari Spice Blend</h3>
-  <ul>
-    <li data-en="Fennel seeds and coriander seeds — 1½ tsp each" data-ur="سونف اور دھنیا — ڈیڑھ چائے کا چمچ ہر ایک">Fennel seeds and coriander seeds — 1½ tsp each</li>
-    <li data-en="Cumin seeds and black cumin (shahi zeera) — 1 tsp each" data-ur="زیرہ اور شاہی زیرہ — 1 چائے کا چمچ ہر ایک">Cumin seeds and black cumin (shahi zeera) — 1 tsp each</li>
-    <li data-en="Whole black pepper and cloves — 1 tsp each" data-ur="کالی مرچ اور لونگ — 1 چائے کا چمچ ہر ایک">Whole black pepper and cloves — 1 tsp each</li>
-    <li data-en="Long pepper (pippali) — 2–3 pieces" data-ur="پپلی — 2 سے 3 عدد">Long pepper (pippali) — 2–3 pieces</li>
-    <li data-en="Green and black cardamom, cinnamon and bay leaves" data-ur="سبز اور بڑی الائچی، دار چینی اور تیز پتے">Green and black cardamom, cinnamon and bay leaves</li>
-    <li data-en="Nutmeg (jaiphal) and mace (javitri)" data-ur="جائفل اور جاوتری">Nutmeg (jaiphal) and mace (javitri)</li>
-    <li data-en="Red chilli powder, Kashmiri red chilli powder and turmeric" data-ur="لال مرچ پاؤڈر، کشمیری لال مرچ اور ہلدی">Red chilli powder, Kashmiri red chilli powder and turmeric</li>
-  </ul>
-
-  <h3 data-en="Thickener & Finishing" data-ur="گاڑھا کرنے کا مکسچر اور گارنش">Thickener & Finishing</h3>
-  <ul>
-    <li data-en="¼ cup atta and all-purpose flour mixture, roasted and mixed with cold water into a smooth paste" data-ur="¼ کپ آٹا اور میدہ، ہلکا بھون کر ٹھنڈے پانی کے ساتھ ہموار پیسٹ بنا لیں">¼ cup atta and all-purpose flour mixture, roasted and mixed with cold water into a smooth paste</li>
-    <li data-en="Fresh ginger juliennes, chopped green chillies, fresh coriander, lemon wedges and fried onions" data-ur="باریک کٹی ادرک، ہری مرچ، تازہ دھنیا، لیموں اور فرائی کی ہوئی پیاز">Fresh ginger juliennes, chopped green chillies, fresh coriander, lemon wedges and fried onions</li>
-  </ul>
-
-  <h3 data-en="Cooking Method" data-ur="بنانے کا طریقہ">Cooking Method</h3>
-  <ol>
-    <li data-en="Dry roast all whole spices in a frying pan on low heat for a short time until fragrant. Let them cool slightly, then grind them into a fine powder." data-ur="تمام ثابت مصالحوں کو فرائنگ پین میں ہلکی آنچ پر تھوڑی دیر خشک بھونیں۔ خوشبو آنے پر تھوڑا ٹھنڈا کریں اور باریک پیس لیں۔">Dry roast all whole spices in a frying pan on low heat for a short time until fragrant. Let them cool slightly, then grind them into a fine powder.</li>
-    <li data-en="Mix the ground spices with red chilli powder, Kashmiri red chilli powder and turmeric." data-ur="پیسے ہوئے مصالحے میں لال مرچ پاؤڈر، کشمیری لال مرچ اور ہلدی مکس کریں۔">Mix the ground spices with red chilli powder, Kashmiri red chilli powder and turmeric.</li>
-    <li data-en="Lightly roast the atta and flour mixture for about 2 minutes. Mix it with the prepared spice blend and about half a glass of cold water to make a smooth paste." data-ur="آٹے اور میدے کے مکسچر کو تقریباً 2 منٹ ہلکا سا بھونیں۔ تیار مصالحے اور تقریباً آدھا گلاس ٹھنڈا پانی ملا کر ہموار پیسٹ بنا لیں۔">Lightly roast the atta and flour mixture for about 2 minutes. Mix it with the prepared spice blend and about half a glass of cold water to make a smooth paste.</li>
-    <li data-en="Heat oil or ghee in a large pot. Add the sliced onions and fry until lightly golden." data-ur="بڑے پتیلے میں تیل یا گھی گرم کریں۔ باریک کٹی پیاز ڈال کر ہلکا سنہری ہونے تک فرائی کریں۔">Heat oil or ghee in a large pot. Add the sliced onions and fry until lightly golden.</li>
-    <li data-en="Add the beef and cook on low heat, stirring occasionally, until it begins to become tender. Add ginger-garlic paste and cook for a few more minutes." data-ur="گوشت شامل کریں اور ہلکی آنچ پر پکائیں۔ جب گوشت نرم ہونا شروع ہو جائے تو ادرک لہسن پیسٹ شامل کرکے چند منٹ مزید پکائیں۔">Add the beef and cook on low heat, stirring occasionally, until it begins to become tender. Add ginger-garlic paste and cook for a few more minutes.</li>
-    <li data-en="Add the prepared Nihari spice mixture and mix well with the meat. Add about 2 litres of water, cover the pot and leave it on low heat until the beef becomes very tender." data-ur="تیار نہاری مصالحہ گوشت میں اچھی طرح مکس کریں۔ تقریباً 2 لیٹر پانی ڈالیں، پتیلا ڈھانپ دیں اور ہلکی آنچ پر گوشت اچھی طرح گلنے تک پکائیں۔">Add the prepared Nihari spice mixture and mix well with the meat. Add about 2 litres of water, cover the pot and leave it on low heat until the beef becomes very tender.</li>
-    <li data-en="Gradually add the prepared flour paste while stirring continuously to prevent lumps. Cook until the Nihari becomes rich and thick." data-ur="تیار آٹے کا پیسٹ آہستہ آہستہ شامل کریں اور مسلسل چلاتے رہیں تاکہ گٹھلیاں نہ بنیں۔ نہاری گاڑھی ہونے تک پکائیں۔">Gradually add the prepared flour paste while stirring continuously to prevent lumps. Cook until the Nihari becomes rich and thick.</li>
-    <li data-en="Serve hot and garnish with fresh ginger, green chillies, coriander, lemon wedges and fried onions." data-ur="گرم گرم سرو کریں اور تازہ ادرک، ہری مرچ، دھنیا، لیموں اور فرائی کی ہوئی پیاز سے گارنش کریں۔">Serve hot and garnish with fresh ginger, green chillies, coriander, lemon wedges and fried onions.</li>
-  </ol>
-</section>
-
-</main>
-<footer>© 2026 Hamza's Kitchen — <span data-en="Made with love for food lovers" data-ur="کھانے کے شوقین افراد کے لیے محبت سے بنایا گیا">Made with love for food lovers</span></footer>
-
-<script>
-let lang='en';
-function setLang(l){
- lang=l; document.documentElement.lang=l; document.documentElement.dir=l==='ur'?'rtl':'ltr';
- document.querySelectorAll('[data-en]').forEach(el=>el.textContent=el.dataset[l]);
- document.querySelectorAll('[data-enph]').forEach(el=>el.placeholder=el.dataset[l+'ph']);
- document.getElementById('en').classList.toggle('active',l==='en');document.getElementById('ur').classList.toggle('active',l==='ur');
-}
-document.getElementById('en').onclick=()=>setLang('en');document.getElementById('ur').onclick=()=>setLang('ur');
-function filterRecipes(){
- const q=document.getElementById('search').value.toLowerCase();
- document.querySelectorAll('.recipe').forEach(c=>c.style.display=c.dataset.name.toLowerCase().includes(q)?'block':'none');
-}
-document.getElementById('search').addEventListener('input',filterRecipes);
-</script>
-</body></html>
+</body>
+</html>
