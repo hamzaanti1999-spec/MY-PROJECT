@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamza's Kitchen - Recipes</title>
+    <title>Hamza's Kitchen - 30 Recipes</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -21,7 +21,6 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--light-cream); color: var(--text-main); }
         a { text-decoration: none; color: inherit; }
 
-        /* Navigation Header */
         .topbar { position: sticky; top: 0; z-index: 100; background: #ffffffdd; backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
         .nav { max-width: 1280px; margin: auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
         .logo-group { display: flex; align-items: center; gap: 10px; }
@@ -38,11 +37,9 @@
         .search-box input { width: 100%; padding: 10px 16px 10px 40px; border-radius: 99px; border: 1px solid var(--border); outline: none; font-size: 0.88rem; background: #F3F5F1; }
         .search-box span { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); opacity: 0.5; }
 
-        /* Container Layout */
         .container { max-width: 1280px; margin: auto; padding: 24px; }
         .main-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; }
 
-        /* Hero Banner */
         .hero { background: linear-gradient(135deg, var(--dark-green), var(--green)); border-radius: 28px; color: #fff; padding: 48px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; position: relative; overflow: hidden; margin-bottom: 40px; }
         .hero-tag { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.6rem; color: var(--orange); margin-bottom: 4px; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; line-height: 1.15; margin-bottom: 16px; }
@@ -55,7 +52,6 @@
         .hero-img-wrap { position: relative; display: flex; justify-content: center; }
         .hero-img-wrap img { width: 100%; max-width: 420px; height: 340px; object-fit: cover; border-radius: 50%; border: 8px solid rgba(255,255,255,0.15); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
 
-        /* Category Section */
         .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
         .section-header h2 { font-size: 1.35rem; font-weight: 700; color: var(--text-main); }
         .view-all { color: var(--green); font-weight: 700; font-size: 0.88rem; }
@@ -67,7 +63,6 @@
         .cat-item h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
         .cat-item span { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
 
-        /* Recipe Grid */
         .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
         .card { background: var(--card-bg); border-radius: 20px; border: 1px solid var(--border); overflow: hidden; position: relative; display: flex; flex-direction: column; }
         .card-img-wrap { height: 200px; position: relative; }
@@ -80,9 +75,13 @@
         .card-body h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
         .rating { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px; }
         .stars { color: #FFC107; }
-        .card-body p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px; flex: 1; }
+        .card-body p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
         
-        /* Sidebar Widgets */
+        .recipe-details { background: #f9faf8; border-radius: 12px; padding: 12px; margin-top: auto; border: 1px solid #edf0eb; font-size: 0.78rem; }
+        .recipe-details h5 { color: var(--green); font-size: 0.8rem; margin-bottom: 4px; text-transform: uppercase; font-weight: 700; }
+        .recipe-details ul, .recipe-details ol { padding-left: 16px; margin-bottom: 8px; }
+        .recipe-details li { margin-bottom: 2px; color: #444; }
+
         .sidebar-widget { background: var(--card-bg); border-radius: 20px; border: 1px solid var(--border); padding: 20px; margin-bottom: 24px; }
         .widget-title { font-size: 1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
         
@@ -98,7 +97,6 @@
         .newsletter-widget input { width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 10px; font-size: 0.85rem; outline: none; }
         .newsletter-widget button { width: 100%; padding: 12px; background: var(--green); color: #fff; border: 0; border-radius: 10px; font-weight: 700; cursor: pointer; }
 
-        /* Footer Features Bar */
         .bottom-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; background: var(--dark-green); color: #fff; padding: 20px; border-radius: 16px; margin-top: 40px; }
         .b-feat { display: flex; align-items: center; gap: 12px; }
         .b-feat span { font-size: 20px; color: var(--orange); }
@@ -121,7 +119,6 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header class="topbar">
         <div class="nav">
             <div class="logo-group">
@@ -146,12 +143,11 @@
     </header>
 
     <div class="container">
-        <!-- Hero Section -->
         <section class="hero">
             <div>
                 <div class="hero-tag">Welcome to</div>
                 <h1>Hamza's Kitchen</h1>
-                <p>A place for food lovers! Find amazing Pakistani recipes with easy step-by-step instructions.</p>
+                <p>A place for food lovers! Find 30 amazing Pakistani recipes with easy step-by-step instructions.</p>
                 <div class="hero-features">
                     <div class="feature-item">
                         <div class="feature-icon">📖</div>
@@ -172,11 +168,8 @@
             </div>
         </section>
 
-        <!-- Main Body Layout -->
         <div class="main-layout">
-            <!-- Left Main Column -->
             <main>
-                <!-- Categories -->
                 <section id="categories" style="margin-bottom: 32px;">
                     <div class="section-header">
                         <h2>Browse Recipes by Category</h2>
@@ -216,14 +209,14 @@
                     </div>
                 </section>
 
-                <!-- Featured Recipes Grid -->
                 <section id="recipes">
                     <div class="section-header">
-                        <h2>Featured Recipes</h2>
+                        <h2>Top 30 Traditional Recipes</h2>
                         <a href="#" class="view-all">View All ›</a>
                     </div>
                     <div class="grid">
-                        <!-- Recipe Card 1 -->
+                        
+                        <!-- Recipe 1 -->
                         <article class="card">
                             <div class="card-img-wrap">
                                 <span class="badge">Popular</span>
@@ -231,15 +224,19 @@
                                 <button class="fav-btn">♥</button>
                             </div>
                             <div class="card-body">
-                                <h3>Chicken Karahi</h3>
-                                <div class="rating">
-                                    <span class="stars">★★★★★</span> (4.7) &nbsp;•&nbsp; ⏱ 30 min
+                                <h3>1. Chicken Karahi</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.7) &nbsp;•&nbsp; ⏱ 30 min</div>
+                                <p>Spicy chicken cooked in a wok with tomatoes and green chillies.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Chicken 1kg, Tomatoes 4, Ginger-Garlic paste 2 tbsp, Spices.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Fry chicken, add ginger-garlic paste.</li><li>Add sliced tomatoes and spices, bhuno till oil separates.</li></ol>
                                 </div>
-                                <p>Delicious and spicy chicken karahi recipe cooked with fresh tomatoes and green chillies.</p>
                             </div>
                         </article>
 
-                        <!-- Recipe Card 2 -->
+                        <!-- Recipe 2 -->
                         <article class="card">
                             <div class="card-img-wrap">
                                 <span class="badge">Popular</span>
@@ -247,15 +244,19 @@
                                 <button class="fav-btn active">♥</button>
                             </div>
                             <div class="card-body">
-                                <h3>Chicken Biryani</h3>
-                                <div class="rating">
-                                    <span class="stars">★★★★★</span> (4.8) &nbsp;•&nbsp; ⏱ 45 min
+                                <h3>2. Chicken Biryani</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.8) &nbsp;•&nbsp; ⏱ 45 min</div>
+                                <p>Aromatic basmati rice cooked layered with flavorful chicken curry.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Basmati Rice 750g, Chicken 1kg, Yogurt 1 cup, Biryani masala.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Prepare spicy chicken gravy.</li><li>Boil rice and layer with chicken gravy; simmer (dam) for 15 mins.</li></ol>
                                 </div>
-                                <p>Aromatic and flavorful chicken biryani made with premium basmati rice and rich spices.</p>
                             </div>
                         </article>
 
-                        <!-- Recipe Card 3 -->
+                        <!-- Recipe 3 -->
                         <article class="card">
                             <div class="card-img-wrap">
                                 <span class="badge" style="background:#4A90E2;">New</span>
@@ -263,15 +264,19 @@
                                 <button class="fav-btn">♥</button>
                             </div>
                             <div class="card-body">
-                                <h3>Shahi Kheer</h3>
-                                <div class="rating">
-                                    <span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 25 min
+                                <h3>3. Shahi Kheer</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 25 min</div>
+                                <p>Traditional rice pudding cooked slow with milk, cardamom, and nuts.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Milk 2 Liters, Rice 1/2 cup, Sugar 1 cup, Nuts, Cardamom.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Boil milk and add soaked ground rice.</li><li>Cook on low flame till thick, add sugar and garnish with nuts.</li></ol>
                                 </div>
-                                <p>Rich and creamy rice kheer garnished with nuts, perfect for festive desserts.</p>
                             </div>
                         </article>
 
-                        <!-- Recipe Card 4 -->
+                        <!-- Recipe 4 -->
                         <article class="card">
                             <div class="card-img-wrap">
                                 <span class="badge">Popular</span>
@@ -279,41 +284,560 @@
                                 <button class="fav-btn">♥</button>
                             </div>
                             <div class="card-body">
-                                <h3>Gol Gappay</h3>
-                                <div class="rating">
-                                    <span class="stars">★★★★★</span> (4.6) &nbsp;•&nbsp; ⏱ 20 min
+                                <h3>4. Gol Gappay</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.6) &nbsp;•&nbsp; ⏱ 20 min</div>
+                                <p>Crispy hollow puris filled with spicy chickpeas and tangy sour water.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Semolina Puri 20, Boiled Chickpeas 1 cup, Tamarind chutney, Mint water.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Poke a hole in puri, fill with chickpeas and potatoes.</li><li>Pour cold spicy mint water and sweet chutney inside.</li></ol>
                                 </div>
-                                <p>Crispy gol gappay served with authentic spicy mint water and tangy tamarind chutney.</p>
                             </div>
                         </article>
+
+                        <!-- Recipe 5 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Popular</span>
+                                <img src="https://images.pexels.com/photos/9603932/pexels-photo-9603932.jpeg" alt="Beef Nihari">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>5. Beef Nihari</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 120 min</div>
+                                <p>Slow-cooked rich beef shank stew garnished with fresh ginger and lemon.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Beef shank 1kg, Wheat flour 1/2 cup, Nihari Masala, Oil 1 cup.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Fry meat in oil with masala, cook until tender.</li><li>Thicken gravy with wheat flour slurry and simmer.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 6 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Classic</span>
+                                <img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg" alt="Chicken Haleem">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>6. Chicken Haleem</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.8) &nbsp;•&nbsp; ⏱ 90 min</div>
+                                <p>Wholesome blend of lentils, wheat, and shredded chicken.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Mixed lentils 1 cup, Crushed wheat 1 cup, Chicken 500g, Spices.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Boil grains till soft; cook chicken curry separately.</li><li>Combine both, blend gently and temper with fried onions.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 7 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">BBQ</span>
+                                <img src="https://images.pexels.com/photos/12737800/pexels-photo-12737800.jpeg" alt="Seekh Kebab">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>7. Beef Seekh Kebab</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.7) &nbsp;•&nbsp; ⏱ 40 min</div>
+                                <p>Minced meat skewers grilled to perfection with herbs and spices.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Minced Beef 500g, Onion 1 (squeezed), Green Chillies, Kebab spices.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Mix mince thoroughly with spices and onion.</li><li>Shape on skewers and grill or pan-fry till browned.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 8 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Vegetarian</span>
+                                <img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg" alt="Daal Chawal">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>8. Daal Chawal</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.5) &nbsp;•&nbsp; ⏱ 30 min</div>
+                                <p>Comforting yellow lentils served with steamed basmati rice.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Yellow Lentils (Moong/Masoor) 1 cup, Rice 2 cups, Garlic, Cumin seeds.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Boil lentils with turmeric and salt till mushy.</li><li>Prepare tadka with oil, garlic, and cumin seeds; pour over lentil.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 9 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Breakfast</span>
+                                <img src="https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg" alt="Halwa Puri">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>9. Halwa Puri Chana</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 40 min</div>
+                                <p>Traditional Sunday breakfast of fried puris, sweet halwa, and spicy chickpeas.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>All-purpose flour, Semolina 1 cup, Chickpeas 1 cup, Sugar 1 cup.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Knead dough and deep fry thin puris.</li><li>Cook sweet semolina halwa and spicy chickpea gravy.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 10 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Special</span>
+                                <img src="https://images.pexels.com/photos/9603932/pexels-photo-9603932.jpeg" alt="Mutton Paya">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>10. Mutton Paya</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.7) &nbsp;•&nbsp; ⏱ 180 min</div>
+                                <p>Traditional slow-cooked trotters soup rich in flavor and nutrition.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Mutton Trotters 4, Onions 2, Whole Spices, Garlic-Ginger paste.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Sauté onions and spices, add trotters and water.</li><li>Slow cook overnight or pressure cook for 1 hour till broth thickens.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 11 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">BBQ</span>
+                                <img src="https://images.pexels.com/photos/12737800/pexels-photo-12737800.jpeg" alt="Chicken Tikka">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>11. Chicken Tikka</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.8) &nbsp;•&nbsp; ⏱ 35 min</div>
+                                <p>Marinated chicken quarter grilled with charcoal smokey flavor.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Chicken quarters 2, Red chilli powder, Yogurt 3 tbsp, Lemon juice.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Marinate chicken cuts with lemon and spices.</li><li>Grill on coals or bake till charred and cooked.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 12 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Creamy</span>
+                                <img src="https://images.pexels.com/photos/16274427/pexels-photo-16274427/free-photo-of-delicious-chicken-biryani.jpeg" alt="Butter Chicken">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>12. Butter Chicken</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 40 min</div>
+                                <p>Tender chicken pieces cooked in a rich, buttery tomato sauce.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Boneless Chicken 500g, Butter 50g, Cream 1/2 cup, Tomato puree.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Fry marinated chicken; cook smooth tomato-butter gravy.</li><li>Mix chicken into gravy, add fresh cream and fenugreek leaves.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 13 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Street Food</span>
+                                <img src="https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg" alt="Samosa Chaat">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>13. Samosa Chaat</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.7) &nbsp;•&nbsp; ⏱ 15 min</div>
+                                <p>Crispy potato samosas crushed and topped with chickpeas, yogurt, and chutneys.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Samosas 2, Chickpea curry, Sweet yogurt, Tamarind & Mint chutney.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Break samosa in a bowl.</li><li>Pour warm chickpea curry, sweetened yogurt, chutneys, and onion top.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 14 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Popular</span>
+                                <img src="https://images.pexels.com/photos/9603932/pexels-photo-9603932.jpeg" alt="Chapli Kebab">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>14. Peshawari Chapli Kebab</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 30 min</div>
+                                <p>Famous flat minced beef patties cooked with tomato slices and pomegranate seeds.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Minced Beef 500g, Corn flour 2 tbsp, Tomato, Pomegranate seeds, Spices.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Mix mince with coarse spices and corn flour.</li><li>Flatten patties with a tomato slice on top and shallow fry in ghee.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 15 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Dessert</span>
+                                <img src="https://images.pexels.com/photos/14883758/pexels-photo-14883758.jpeg" alt="Gulab Jamun">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>15. Gulab Jamun</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.8) &nbsp;•&nbsp; ⏱ 30 min</div>
+                                <p>Soft milk-solid balls fried and soaked in rose-flavored sugar syrup.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Milk Powder 1 cup, Flour 2 tbsp, Ghee 1 tbsp, Sugar syrup.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Knead smooth dough balls.</li><li>Fry on very low flame till golden red and soak in hot sugar syrup.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 16 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Mild</span>
+                                <img src="https://images.pexels.com/photos/12737800/pexels-photo-12737800.jpeg" alt="Chicken Korma">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>16. Shahi Chicken Korma</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.6) &nbsp;•&nbsp; ⏱ 45 min</div>
+                                <p>Rich gravy cooked with fried crispy onions, yogurt, and kewra water.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Chicken 1kg, Yogurt 1 cup, Fried Onions 1 cup, Korma spice.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Whisk yogurt with ground fried onions and spices.</li><li>Cook chicken in oil, add yogurt paste and simmer till fragrant.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 17 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Rice</span>
+                                <img src="https://images.pexels.com/photos/16274427/pexels-photo-16274427/free-photo-of-delicious-chicken-biryani.jpeg" alt="Yakhni Pulao">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>17. Mutton Yakhni Pulao</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 60 min</div>
+                                <p>Basmati rice cooked in seasoned mutton broth for subtle savory flavor.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Mutton 500g, Basmati Rice 500g, Whole Garam Masala, Onion.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Boil mutton with whole spices to create aromatic broth (Yakhni).</li><li>Cook rice directly in broth with mutton until water absorbs.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 18 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Vegetarian</span>
+                                <img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg" alt="Palak Paneer">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>18. Palak Paneer</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.5) &nbsp;•&nbsp; ⏱ 25 min</div>
+                                <p>Pureed fresh spinach curry mixed with cubes of cottage cheese.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Spinach 500g, Paneer 200g, Garlic 1 tbsp, Fresh cream 2 tbsp.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Blanch and puree spinach.</li><li>Sauté garlic, add puree and paneer cubes, cook for 5 minutes.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 19 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Healthy</span>
+                                <img src="https://images.pexels.com/photos/12737800/pexels-photo-12737800.jpeg" alt="Aloo Gobi">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>19. Aloo Gobi</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.4) &nbsp;•&nbsp; ⏱ 25 min</div>
+                                <p>Dry potato and cauliflower curry tempered with cumin and turmeric.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Cauliflower 1 head, Potatoes 2, Cumin, Turmeric, Tomatoes.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Fry cumin seeds, onions, and chopped tomatoes.</li><li>Add potatoes and cauliflower florets, steam cook on low flame.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 20 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Street Food</span>
+                                <img src="https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg" alt="Bun Kebab">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>20. Karachi Bun Kebab</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.8) &nbsp;•&nbsp; ⏱ 20 min</div>
+                                <p>Street style burger with lentil patty, spicy green chutney, and fried egg.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Burger buns, Daal-meat patty, Whisked egg, Spicy mint chutney.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Dip patty in fluffy egg white and pan-fry.</li><li>Assemble inside toasted bun with chutney and sliced onions.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 21 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Creamy</span>
+                                <img src="https://images.pexels.com/photos/9603932/pexels-photo-9603932.jpeg" alt="Malai Boti">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>21. Chicken Malai Boti</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 30 min</div>
+                                <p>Melt-in-mouth chicken marinated with heavy cream, cheese, and white pepper.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Boneless Chicken 500g, Cream 4 tbsp, Green chilli paste, White pepper.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Marinate chicken cubes in cream and mild spices for 2 hours.</li><li>Grill or skewer until tender and lightly charred.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 22 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Dessert</span>
+                                <img src="https://images.pexels.com/photos/14883758/pexels-photo-14883758.jpeg" alt="Gajar Ka Halwa">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>22. Gajar Ka Halwa</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 50 min</div>
+                                <p>Winter special dessert made with grated carrots cooked slow in milk and ghee.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Red Carrots 1kg, Milk 1 Liter, Sugar 1 cup, Ghee 4 tbsp, Khoya.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Cook grated carrots in milk till dry.</li><li>Add ghee, sugar, sauté thoroughly, and top with khoya.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 23 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Rich</span>
+                                <img src="https://images.pexels.com/photos/12737800/pexels-photo-12737800.jpeg" alt="White Karahi">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>23. Chicken White Karahi</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.7) &nbsp;•&nbsp; ⏱ 30 min</div>
+                                <p>Delicious chicken cooked without tomatoes using yogurt and fresh cream base.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Chicken 1kg, Yogurt 1 cup, Fresh Cream 1/2 cup, Black pepper.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Fry chicken in ginger-garlic paste.</li><li>Add whisked yogurt, black pepper, and finish off with fresh cream.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 24 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Dessert</span>
+                                <img src="https://images.pexels.com/photos/14883758/pexels-photo-14883758.jpeg" alt="Rasmalai">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>24. Rasmalai</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.8) &nbsp;•&nbsp; ⏱ 35 min</div>
+                                <p>Flattened milk-curd patties soaked in saffron and cardamom flavored thick milk.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Dry Milk 1 cup, Egg 1, Oil 1 tbsp, Liquid Milk 1 Liter, Saffron.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Prepare small dough balls using dry milk and egg.</li><li>Drop patties into boiling sweetened saffron milk till doubled in size.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 25 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Vegetarian</span>
+                                <img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg" alt="Bhindi Masala">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>25. Bhindi Masala</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.5) &nbsp;•&nbsp; ⏱ 20 min</div>
+                                <p>Okra stir-fried with onions, tomatoes, and tangy spices.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Okra (Bhindi) 500g, Onions 3, Tomatoes 2, Cumin, Amchur powder.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Fry chopped okra to remove stickiness.</li><li>Cook onions and tomatoes separately, combine with fried okra and steam.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 26 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Classic</span>
+                                <img src="https://images.pexels.com/photos/9603932/pexels-photo-9603932.jpeg" alt="Aloo Keema">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>26. Aloo Keema</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.7) &nbsp;•&nbsp; ⏱ 35 min</div>
+                                <p>Minced mutton or beef cooked dry with diced potatoes and herbs.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Minced Beef 500g, Potatoes 2 (cubed), Tomatoes 2, Whole Spices.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Cook minced meat with onions and spices till dry.</li><li>Add cubed potatoes and little water; cover till potatoes are tender.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 27 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Snack</span>
+                                <img src="https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg" alt="Pakoras">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>27. Mix Vegetable Pakora</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.8) &nbsp;•&nbsp; ⏱ 15 min</div>
+                                <p>Deep fried crispy fritters made of gram flour, potatoes, and spinach.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Gram Flour (Besan) 1 cup, Potato 1, Onion 1, Spinach, Spices.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Mix sliced veggies into spiced besan batter with little water.</li><li>Drop spoonfuls into hot oil and fry till crispy brown.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 28 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Street Food</span>
+                                <img src="https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg" alt="Dahi Bhalle">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>28. Dahi Bhalle</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.6) &nbsp;•&nbsp; ⏱ 25 min</div>
+                                <p>Lentil dumplings soaked in sweetened yogurt topped with chaat masala.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Urad daal batter, Yogurt 2 cups, Chaat masala, Sweet chutney.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Fry lentil batter dumplings, soak briefly in warm water.</li><li>Squeeze out water, submerge in smooth yogurt, and sprinkle seasonings.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 29 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Dessert</span>
+                                <img src="https://images.pexels.com/photos/14883758/pexels-photo-14883758.jpeg" alt="Zarda">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>29. Sweet Meethe Chawal (Zarda)</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.7) &nbsp;•&nbsp; ⏱ 30 min</div>
+                                <p>Traditional yellow sweet rice cooked with sugar syrup and dry fruits.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Basmati Rice 2 cups, Sugar 1.5 cups, Food Color, Nuts & Cham Cham.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Boil rice with yellow food color.</li><li>Prepare sugar syrup in ghee, mix boiled rice, and simmer (dam).</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Recipe 30 -->
+                        <article class="card">
+                            <div class="card-img-wrap">
+                                <span class="badge">Drink</span>
+                                <img src="https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg" alt="Mango Lassi">
+                                <button class="fav-btn">♥</button>
+                            </div>
+                            <div class="card-body">
+                                <h3>30. Mango Lassi</h3>
+                                <div class="rating"><span class="stars">★★★★★</span> (4.9) &nbsp;•&nbsp; ⏱ 5 min</div>
+                                <p>Refreshing summer smoothie made with yogurt, fresh mango pulp, and milk.</p>
+                                <div class="recipe-details">
+                                    <h5>Ingredients</h5>
+                                    <ul><li>Mango Pulp 1 cup, Yogurt 1 cup, Milk 1/2 cup, Sugar 2 tbsp.</li></ul>
+                                    <h5>Method</h5>
+                                    <ol><li>Blend all ingredients with crushed ice till smooth.</li><li>Serve chilled in highball glasses.</li></ol>
+                                </div>
+                            </div>
+                        </article>
+
                     </div>
                 </section>
             </main>
 
-            <!-- Right Sidebar -->
             <aside>
-                <!-- Today's Special -->
                 <div class="sidebar-widget">
                     <div class="widget-title">🔥 Today's Special</div>
                     <div class="special-card">
                         <img src="https://images.pexels.com/photos/9603932/pexels-photo-9603932.jpeg" alt="Beef Nihari">
                         <h4>Beef Nihari</h4>
-                        <div class="rating">
-                            <span class="stars">★★★★★</span> (4.8)
-                        </div>
+                        <div class="rating"><span class="stars">★★★★★</span> (4.8)</div>
                         <p style="font-size:0.8rem; color:var(--text-muted); margin-top:4px;">Traditional beef nihari slow cooked to perfection with aromatic spices.</p>
                         <a href="#" class="btn-view">View Recipe</a>
                     </div>
                 </div>
 
-                <!-- Callout Banner -->
                 <div class="banner-widget">
                     <h3>Cook Delicious<br>Eat Healthy<br>Be Happy</h3>
                     <p>Discover easy healthy lifestyle options.</p>
                     <button class="banner-btn">Eat Healthy, Live Healthy</button>
                 </div>
 
-                <!-- Newsletter Signup -->
                 <div class="sidebar-widget newsletter-widget" style="margin-top: 24px;">
                     <div class="widget-title">📩 Get New Recipes!</div>
                     <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Subscribe to get tasty recipes and cooking tips directly in your inbox.</p>
@@ -323,7 +847,6 @@
             </aside>
         </div>
 
-        <!-- Bottom Features Bar -->
         <div class="bottom-features">
             <div class="b-feat">
                 <span>🍳</span>
